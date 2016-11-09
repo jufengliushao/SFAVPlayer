@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF6E98AA1DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6E98A91DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m */; };
+		FF7710151DD2C2CF00CAB2F4 /* waiting_1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF7710091DD2C2CF00CAB2F4 /* waiting_1.tiff */; };
+		FF7710161DD2C2CF00CAB2F4 /* waiting_10.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF77100A1DD2C2CF00CAB2F4 /* waiting_10.tiff */; };
+		FF7710171DD2C2CF00CAB2F4 /* waiting_11.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF77100B1DD2C2CF00CAB2F4 /* waiting_11.tiff */; };
+		FF7710181DD2C2CF00CAB2F4 /* waiting_12.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF77100C1DD2C2CF00CAB2F4 /* waiting_12.tiff */; };
+		FF7710191DD2C2CF00CAB2F4 /* waiting_2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF77100D1DD2C2CF00CAB2F4 /* waiting_2.tiff */; };
+		FF77101A1DD2C2CF00CAB2F4 /* waiting_3.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF77100E1DD2C2CF00CAB2F4 /* waiting_3.tiff */; };
+		FF77101B1DD2C2CF00CAB2F4 /* waiting_4.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF77100F1DD2C2CF00CAB2F4 /* waiting_4.tiff */; };
+		FF77101C1DD2C2CF00CAB2F4 /* waiting_5.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF7710101DD2C2CF00CAB2F4 /* waiting_5.tiff */; };
+		FF77101D1DD2C2CF00CAB2F4 /* waiting_6.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF7710111DD2C2CF00CAB2F4 /* waiting_6.tiff */; };
+		FF77101E1DD2C2CF00CAB2F4 /* waiting_7.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF7710121DD2C2CF00CAB2F4 /* waiting_7.tiff */; };
+		FF77101F1DD2C2CF00CAB2F4 /* waiting_8.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF7710131DD2C2CF00CAB2F4 /* waiting_8.tiff */; };
+		FF7710201DD2C2CF00CAB2F4 /* waiting_9.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF7710141DD2C2CF00CAB2F4 /* waiting_9.tiff */; };
+		FF8918F71DB0B06C00F7C7CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8918F61DB0B06C00F7C7CA /* main.m */; };
+		FF8919001DB0B06C00F7C7CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF8918FE1DB0B06C00F7C7CA /* Main.storyboard */; };
+		FF8919021DB0B06C00F7C7CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF8919011DB0B06C00F7C7CA /* Assets.xcassets */; };
+		FF8919051DB0B06C00F7C7CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF8919031DB0B06C00F7C7CA /* LaunchScreen.storyboard */; };
+		FF8919101DB0B06C00F7C7CA /* SFAVplayerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF89190F1DB0B06C00F7C7CA /* SFAVplayerDemoTests.m */; };
+		FF89191B1DB0B06C00F7C7CA /* SFAVplayerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF89191A1DB0B06C00F7C7CA /* SFAVplayerDemoUITests.m */; };
+		FF89192A1DB0B08700F7C7CA /* SFAVplayerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8919291DB0B08700F7C7CA /* SFAVplayerAppDelegate.m */; };
+		FF89192D1DB0B0DB00F7C7CA /* SFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF89192C1DB0B0DB00F7C7CA /* SFMainViewController.m */; };
+		FF8919351DB0B31A00F7C7CA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8919341DB0B31A00F7C7CA /* AVFoundation.framework */; };
+		FF8919381DB0B65300F7C7CA /* SFAVplayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8919371DB0B65300F7C7CA /* SFAVplayerView.m */; };
+		FFA427491DCACDAB0056902D /* SFAVplayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA427481DCACDAB0056902D /* SFAVplayModel.m */; };
+		FFA4274E1DCAE6ED0056902D /* SFAVPlayerVerticalBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA4274D1DCAE6ED0056902D /* SFAVPlayerVerticalBottomView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF89190C1DB0B06C00F7C7CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF8918EA1DB0B06C00F7C7CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF8918F11DB0B06C00F7C7CA;
+			remoteInfo = SFAVplayerDemo;
+		};
+		FF8919171DB0B06C00F7C7CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF8918EA1DB0B06C00F7C7CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF8918F11DB0B06C00F7C7CA;
+			remoteInfo = SFAVplayerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF6E98A81DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAVPlayerVerticalBottomView.h; sourceTree = "<group>"; };
+		FF6E98A91DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAVPlayerVerticalBottomView.m; sourceTree = "<group>"; };
+		FF6E98AC1DCB3BF400F7CDA2 /* SFHelper.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFHelper.pch; sourceTree = "<group>"; };
+		FF7710091DD2C2CF00CAB2F4 /* waiting_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = waiting_1.tiff; sourceTree = "<group>"; };
+		FF77100A1DD2C2CF00CAB2F4 /* waiting_10.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = waiting_10.tiff; sourceTree = "<group>"; };
+		FF77100B1DD2C2CF00CAB2F4 /* waiting_11.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = waiting_11.tiff; sourceTree = "<group>"; };
+		FF77100C1DD2C2CF00CAB2F4 /* waiting_12.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = waiting_12.tiff; sourceTree = "<group>"; };
+		FF77100D1DD2C2CF00CAB2F4 /* waiting_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = waiting_2.tiff; sourceTree = "<group>"; };
+		FF77100E1DD2C2CF00CAB2F4 /* waiting_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = waiting_3.tiff; sourceTree = "<group>"; };
+		FF77100F1DD2C2CF00CAB2F4 /* waiting_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = waiting_4.tiff; sourceTree = "<group>"; };
+		FF7710101DD2C2CF00CAB2F4 /* waiting_5.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = waiting_5.tiff; sourceTree = "<group>"; };
+		FF7710111DD2C2CF00CAB2F4 /* waiting_6.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = waiting_6.tiff; sourceTree = "<group>"; };
+		FF7710121DD2C2CF00CAB2F4 /* waiting_7.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = waiting_7.tiff; sourceTree = "<group>"; };
+		FF7710131DD2C2CF00CAB2F4 /* waiting_8.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = waiting_8.tiff; sourceTree = "<group>"; };
+		FF7710141DD2C2CF00CAB2F4 /* waiting_9.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = waiting_9.tiff; sourceTree = "<group>"; };
+		FF8918F21DB0B06C00F7C7CA /* SFAVplayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFAVplayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8918F61DB0B06C00F7C7CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FF8918FF1DB0B06C00F7C7CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF8919011DB0B06C00F7C7CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF8919041DB0B06C00F7C7CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF8919061DB0B06C00F7C7CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF89190B1DB0B06C00F7C7CA /* SFAVplayerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFAVplayerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF89190F1DB0B06C00F7C7CA /* SFAVplayerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAVplayerDemoTests.m; sourceTree = "<group>"; };
+		FF8919111DB0B06C00F7C7CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF8919161DB0B06C00F7C7CA /* SFAVplayerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFAVplayerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF89191A1DB0B06C00F7C7CA /* SFAVplayerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAVplayerDemoUITests.m; sourceTree = "<group>"; };
+		FF89191C1DB0B06C00F7C7CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF8919281DB0B08700F7C7CA /* SFAVplayerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAVplayerAppDelegate.h; sourceTree = "<group>"; };
+		FF8919291DB0B08700F7C7CA /* SFAVplayerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAVplayerAppDelegate.m; sourceTree = "<group>"; };
+		FF89192B1DB0B0DB00F7C7CA /* SFMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMainViewController.h; sourceTree = "<group>"; };
+		FF89192C1DB0B0DB00F7C7CA /* SFMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMainViewController.m; sourceTree = "<group>"; };
+		FF8919341DB0B31A00F7C7CA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FF8919361DB0B65300F7C7CA /* SFAVplayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAVplayerView.h; sourceTree = "<group>"; };
+		FF8919371DB0B65300F7C7CA /* SFAVplayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAVplayerView.m; sourceTree = "<group>"; };
+		FFA427471DCACDAB0056902D /* SFAVplayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAVplayModel.h; sourceTree = "<group>"; };
+		FFA427481DCACDAB0056902D /* SFAVplayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAVplayModel.m; sourceTree = "<group>"; };
+		FFA4274D1DCAE6ED0056902D /* SFAVPlayerVerticalBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFAVPlayerVerticalBottomView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF8918EF1DB0B06C00F7C7CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF8919351DB0B31A00F7C7CA /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8919081DB0B06C00F7C7CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8919131DB0B06C00F7C7CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF7710081DD2C2CF00CAB2F4 /* WaitingImage */ = {
+			isa = PBXGroup;
+			children = (
+				FF7710091DD2C2CF00CAB2F4 /* waiting_1.tiff */,
+				FF77100A1DD2C2CF00CAB2F4 /* waiting_10.tiff */,
+				FF77100B1DD2C2CF00CAB2F4 /* waiting_11.tiff */,
+				FF77100C1DD2C2CF00CAB2F4 /* waiting_12.tiff */,
+				FF77100D1DD2C2CF00CAB2F4 /* waiting_2.tiff */,
+				FF77100E1DD2C2CF00CAB2F4 /* waiting_3.tiff */,
+				FF77100F1DD2C2CF00CAB2F4 /* waiting_4.tiff */,
+				FF7710101DD2C2CF00CAB2F4 /* waiting_5.tiff */,
+				FF7710111DD2C2CF00CAB2F4 /* waiting_6.tiff */,
+				FF7710121DD2C2CF00CAB2F4 /* waiting_7.tiff */,
+				FF7710131DD2C2CF00CAB2F4 /* waiting_8.tiff */,
+				FF7710141DD2C2CF00CAB2F4 /* waiting_9.tiff */,
+			);
+			path = WaitingImage;
+			sourceTree = "<group>";
+		};
+		FF8918E91DB0B06C00F7C7CA = {
+			isa = PBXGroup;
+			children = (
+				FF8918F41DB0B06C00F7C7CA /* SFAVplayerDemo */,
+				FF89190E1DB0B06C00F7C7CA /* SFAVplayerDemoTests */,
+				FF8919191DB0B06C00F7C7CA /* SFAVplayerDemoUITests */,
+				FF8918F31DB0B06C00F7C7CA /* Products */,
+				FF8919331DB0B31A00F7C7CA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FF8918F31DB0B06C00F7C7CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF8918F21DB0B06C00F7C7CA /* SFAVplayerDemo.app */,
+				FF89190B1DB0B06C00F7C7CA /* SFAVplayerDemoTests.xctest */,
+				FF8919161DB0B06C00F7C7CA /* SFAVplayerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF8918F41DB0B06C00F7C7CA /* SFAVplayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FF89192E1DB0B14B00F7C7CA /* SFAVPlayer */,
+				FF8919281DB0B08700F7C7CA /* SFAVplayerAppDelegate.h */,
+				FF8919291DB0B08700F7C7CA /* SFAVplayerAppDelegate.m */,
+				FF89192B1DB0B0DB00F7C7CA /* SFMainViewController.h */,
+				FF89192C1DB0B0DB00F7C7CA /* SFMainViewController.m */,
+				FF8918FE1DB0B06C00F7C7CA /* Main.storyboard */,
+				FF7710081DD2C2CF00CAB2F4 /* WaitingImage */,
+				FF8919321DB0B28000F7C7CA /* SFHelper */,
+				FF8919011DB0B06C00F7C7CA /* Assets.xcassets */,
+				FF8919031DB0B06C00F7C7CA /* LaunchScreen.storyboard */,
+				FF8919061DB0B06C00F7C7CA /* Info.plist */,
+				FF8918F51DB0B06C00F7C7CA /* Supporting Files */,
+			);
+			path = SFAVplayerDemo;
+			sourceTree = "<group>";
+		};
+		FF8918F51DB0B06C00F7C7CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF8918F61DB0B06C00F7C7CA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF89190E1DB0B06C00F7C7CA /* SFAVplayerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF89190F1DB0B06C00F7C7CA /* SFAVplayerDemoTests.m */,
+				FF8919111DB0B06C00F7C7CA /* Info.plist */,
+			);
+			path = SFAVplayerDemoTests;
+			sourceTree = "<group>";
+		};
+		FF8919191DB0B06C00F7C7CA /* SFAVplayerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF89191A1DB0B06C00F7C7CA /* SFAVplayerDemoUITests.m */,
+				FF89191C1DB0B06C00F7C7CA /* Info.plist */,
+			);
+			path = SFAVplayerDemoUITests;
+			sourceTree = "<group>";
+		};
+		FF89192E1DB0B14B00F7C7CA /* SFAVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				FF8919361DB0B65300F7C7CA /* SFAVplayerView.h */,
+				FF8919371DB0B65300F7C7CA /* SFAVplayerView.m */,
+				FF89192F1DB0B26800F7C7CA /* SFAVplayerModel */,
+				FF8919301DB0B26800F7C7CA /* SFAVplayerView */,
+				FF8919311DB0B26800F7C7CA /* SFAVplayerViewModel */,
+			);
+			path = SFAVPlayer;
+			sourceTree = "<group>";
+		};
+		FF89192F1DB0B26800F7C7CA /* SFAVplayerModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFA427471DCACDAB0056902D /* SFAVplayModel.h */,
+				FFA427481DCACDAB0056902D /* SFAVplayModel.m */,
+			);
+			path = SFAVplayerModel;
+			sourceTree = "<group>";
+		};
+		FF8919301DB0B26800F7C7CA /* SFAVplayerView */ = {
+			isa = PBXGroup;
+			children = (
+				FF6E98A81DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.h */,
+				FF6E98A91DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m */,
+				FFA4274D1DCAE6ED0056902D /* SFAVPlayerVerticalBottomView.xib */,
+			);
+			path = SFAVplayerView;
+			sourceTree = "<group>";
+		};
+		FF8919311DB0B26800F7C7CA /* SFAVplayerViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SFAVplayerViewModel;
+			sourceTree = "<group>";
+		};
+		FF8919321DB0B28000F7C7CA /* SFHelper */ = {
+			isa = PBXGroup;
+			children = (
+				FF6E98AC1DCB3BF400F7CDA2 /* SFHelper.pch */,
+			);
+			path = SFHelper;
+			sourceTree = "<group>";
+		};
+		FF8919331DB0B31A00F7C7CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF8919341DB0B31A00F7C7CA /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF8918F11DB0B06C00F7C7CA /* SFAVplayerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF89191F1DB0B06C00F7C7CA /* Build configuration list for PBXNativeTarget "SFAVplayerDemo" */;
+			buildPhases = (
+				FF8918EE1DB0B06C00F7C7CA /* Sources */,
+				FF8918EF1DB0B06C00F7C7CA /* Frameworks */,
+				FF8918F01DB0B06C00F7C7CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SFAVplayerDemo;
+			productName = SFAVplayerDemo;
+			productReference = FF8918F21DB0B06C00F7C7CA /* SFAVplayerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF89190A1DB0B06C00F7C7CA /* SFAVplayerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF8919221DB0B06C00F7C7CA /* Build configuration list for PBXNativeTarget "SFAVplayerDemoTests" */;
+			buildPhases = (
+				FF8919071DB0B06C00F7C7CA /* Sources */,
+				FF8919081DB0B06C00F7C7CA /* Frameworks */,
+				FF8919091DB0B06C00F7C7CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF89190D1DB0B06C00F7C7CA /* PBXTargetDependency */,
+			);
+			name = SFAVplayerDemoTests;
+			productName = SFAVplayerDemoTests;
+			productReference = FF89190B1DB0B06C00F7C7CA /* SFAVplayerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF8919151DB0B06C00F7C7CA /* SFAVplayerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF8919251DB0B06C00F7C7CA /* Build configuration list for PBXNativeTarget "SFAVplayerDemoUITests" */;
+			buildPhases = (
+				FF8919121DB0B06C00F7C7CA /* Sources */,
+				FF8919131DB0B06C00F7C7CA /* Frameworks */,
+				FF8919141DB0B06C00F7C7CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF8919181DB0B06C00F7C7CA /* PBXTargetDependency */,
+			);
+			name = SFAVplayerDemoUITests;
+			productName = SFAVplayerDemoUITests;
+			productReference = FF8919161DB0B06C00F7C7CA /* SFAVplayerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF8918EA1DB0B06C00F7C7CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "cnlive-lsf";
+				TargetAttributes = {
+					FF8918F11DB0B06C00F7C7CA = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					FF89190A1DB0B06C00F7C7CA = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FF8918F11DB0B06C00F7C7CA;
+					};
+					FF8919151DB0B06C00F7C7CA = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FF8918F11DB0B06C00F7C7CA;
+					};
+				};
+			};
+			buildConfigurationList = FF8918ED1DB0B06C00F7C7CA /* Build configuration list for PBXProject "SFAVplayerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF8918E91DB0B06C00F7C7CA;
+			productRefGroup = FF8918F31DB0B06C00F7C7CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF8918F11DB0B06C00F7C7CA /* SFAVplayerDemo */,
+				FF89190A1DB0B06C00F7C7CA /* SFAVplayerDemoTests */,
+				FF8919151DB0B06C00F7C7CA /* SFAVplayerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF8918F01DB0B06C00F7C7CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF7710201DD2C2CF00CAB2F4 /* waiting_9.tiff in Resources */,
+				FF77101A1DD2C2CF00CAB2F4 /* waiting_3.tiff in Resources */,
+				FF7710151DD2C2CF00CAB2F4 /* waiting_1.tiff in Resources */,
+				FF7710171DD2C2CF00CAB2F4 /* waiting_11.tiff in Resources */,
+				FF7710161DD2C2CF00CAB2F4 /* waiting_10.tiff in Resources */,
+				FF77101C1DD2C2CF00CAB2F4 /* waiting_5.tiff in Resources */,
+				FF7710181DD2C2CF00CAB2F4 /* waiting_12.tiff in Resources */,
+				FF7710191DD2C2CF00CAB2F4 /* waiting_2.tiff in Resources */,
+				FFA4274E1DCAE6ED0056902D /* SFAVPlayerVerticalBottomView.xib in Resources */,
+				FF77101E1DD2C2CF00CAB2F4 /* waiting_7.tiff in Resources */,
+				FF77101B1DD2C2CF00CAB2F4 /* waiting_4.tiff in Resources */,
+				FF77101F1DD2C2CF00CAB2F4 /* waiting_8.tiff in Resources */,
+				FF8919051DB0B06C00F7C7CA /* LaunchScreen.storyboard in Resources */,
+				FF8919021DB0B06C00F7C7CA /* Assets.xcassets in Resources */,
+				FF77101D1DD2C2CF00CAB2F4 /* waiting_6.tiff in Resources */,
+				FF8919001DB0B06C00F7C7CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8919091DB0B06C00F7C7CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8919141DB0B06C00F7C7CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF8918EE1DB0B06C00F7C7CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF8918F71DB0B06C00F7C7CA /* main.m in Sources */,
+				FFA427491DCACDAB0056902D /* SFAVplayModel.m in Sources */,
+				FF6E98AA1DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m in Sources */,
+				FF89192D1DB0B0DB00F7C7CA /* SFMainViewController.m in Sources */,
+				FF89192A1DB0B08700F7C7CA /* SFAVplayerAppDelegate.m in Sources */,
+				FF8919381DB0B65300F7C7CA /* SFAVplayerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8919071DB0B06C00F7C7CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF8919101DB0B06C00F7C7CA /* SFAVplayerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8919121DB0B06C00F7C7CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF89191B1DB0B06C00F7C7CA /* SFAVplayerDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF89190D1DB0B06C00F7C7CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF8918F11DB0B06C00F7C7CA /* SFAVplayerDemo */;
+			targetProxy = FF89190C1DB0B06C00F7C7CA /* PBXContainerItemProxy */;
+		};
+		FF8919181DB0B06C00F7C7CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF8918F11DB0B06C00F7C7CA /* SFAVplayerDemo */;
+			targetProxy = FF8919171DB0B06C00F7C7CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF8918FE1DB0B06C00F7C7CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF8918FF1DB0B06C00F7C7CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF8919031DB0B06C00F7C7CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF8919041DB0B06C00F7C7CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF89191D1DB0B06C00F7C7CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF89191E1DB0B06C00F7C7CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF8919201DB0B06C00F7C7CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = SFAVplayerDemo/SFHelper/SFHelper.pch;
+				INFOPLIST_FILE = SFAVplayerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cnlive-lsf.SFAVplayerDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FF8919211DB0B06C00F7C7CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = SFAVplayerDemo/SFHelper/SFHelper.pch;
+				INFOPLIST_FILE = SFAVplayerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cnlive-lsf.SFAVplayerDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FF8919231DB0B06C00F7C7CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SFAVplayerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cnlive-lsf.SFAVplayerDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFAVplayerDemo.app/SFAVplayerDemo";
+			};
+			name = Debug;
+		};
+		FF8919241DB0B06C00F7C7CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SFAVplayerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cnlive-lsf.SFAVplayerDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFAVplayerDemo.app/SFAVplayerDemo";
+			};
+			name = Release;
+		};
+		FF8919261DB0B06C00F7C7CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SFAVplayerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cnlive-lsf.SFAVplayerDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SFAVplayerDemo;
+			};
+			name = Debug;
+		};
+		FF8919271DB0B06C00F7C7CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SFAVplayerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cnlive-lsf.SFAVplayerDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SFAVplayerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF8918ED1DB0B06C00F7C7CA /* Build configuration list for PBXProject "SFAVplayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF89191D1DB0B06C00F7C7CA /* Debug */,
+				FF89191E1DB0B06C00F7C7CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF89191F1DB0B06C00F7C7CA /* Build configuration list for PBXNativeTarget "SFAVplayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF8919201DB0B06C00F7C7CA /* Debug */,
+				FF8919211DB0B06C00F7C7CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF8919221DB0B06C00F7C7CA /* Build configuration list for PBXNativeTarget "SFAVplayerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF8919231DB0B06C00F7C7CA /* Debug */,
+				FF8919241DB0B06C00F7C7CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF8919251DB0B06C00F7C7CA /* Build configuration list for PBXNativeTarget "SFAVplayerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF8919261DB0B06C00F7C7CA /* Debug */,
+				FF8919271DB0B06C00F7C7CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF8918EA1DB0B06C00F7C7CA /* Project object */;
+}

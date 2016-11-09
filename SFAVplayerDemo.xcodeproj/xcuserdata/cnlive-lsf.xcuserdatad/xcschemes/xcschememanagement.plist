@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>SFAVplayerDemo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>FF8918F11DB0B06C00F7C7CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF89190A1DB0B06C00F7C7CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF8919151DB0B06C00F7C7CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
