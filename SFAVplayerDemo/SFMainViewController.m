@@ -9,15 +9,20 @@
 #import "SFMainViewController.h"
 #import "SFAVplayerView.h"
 
-@interface SFMainViewController ()
+
+@interface SFMainViewController ()<SF_SCREEN_CHANGED_DELEGATE>
 @property (nonatomic, strong) SFAVplayerView *playerView;
 @property (nonatomic, strong) SFAVplayModel *dataModel;
+@property (nonatomic, strong) SFAVplayerScreenDirectionTool *screenTool;
 @end
 
 @implementation SFMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.screenTool = [SFAVplayerScreenDirectionTool sharedSingleton];
+    self.screenTool.delegate = self;
     
     self.dataModel = [[SFAVplayModel alloc] initWithVideoUrlArr:@[@"http://wideo00.cnlive.com/video/data1/2016/0816/111893/400/1d24f0ef196a4c2987faac9c605f1d98_111893_1_400.m3u8", @"http://wideo00.cnlive.com/video/data1/2016/0816/111893/800/1d24f0ef196a4c2987faac9c605f1d98_111893_1_800.m3u8", @"http://wideo00.cnlive.com/video/data1/2016/0816/111893/1500/1d24f0ef196a4c2987faac9c605f1d98_111893_1_1500.m3u8"]videoURLTitleArr:@[@"标清", @"高清", @"超清"] videoTitle:@"金海岸主题-MV"];
     [self.view addSubview:self.playerView];
@@ -27,6 +32,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark ------------SF_SCREEN_CHANGED_DELEGATE----------
+- (void)sf_wholeScreenDelegate{
+    
+}
+
+- (void)sf_portraitScreenDelegate{
+    
 }
 
 #pragma mark ------------------init-------------------

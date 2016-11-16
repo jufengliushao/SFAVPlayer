@@ -18,7 +18,7 @@ static NSString *playerBufferEmpty = @"playbackBufferEmpty";
 static NSString *playerKeepUp = @"playbackLikelyToKeepUp";
 static NSString *playerBufferFull = @"playbackBufferFull";
 
-@interface SFAVplayerView(){
+@interface SFAVplayerView()<SF_SCREEN_CHANGED_DELEGATE>{
     SFAVplayModel *_playerModel;
     CGFloat _videoTotalTime;
     CGFloat _playerCurrentRate; // 当前播放时间比例
@@ -30,6 +30,9 @@ static NSString *playerBufferFull = @"playbackBufferFull";
     AVPlayerLayer *_playerLayer;
     NSTimer *_sliderTimer;
     CMMotionManager *_motionManager;
+    
+    /** Tool */
+    SFAVplayerScreenDirectionTool *_screenDirectionTool;
 }
 
 @property (strong, nonatomic) SFAVPlayerVerticalBottomView *toolVerticalView;
@@ -40,6 +43,8 @@ static NSString *playerBufferFull = @"playbackBufferFull";
 - (instancetype)initWithFrame:(CGRect)frame playerModel:(SFAVplayModel *)playerModel{
     if (self = [super initWithFrame:frame]) {
         _playerModel = playerModel;
+        _screenDirectionTool = [SFAVplayerScreenDirectionTool sharedSingleton];
+        _screenDirectionTool.delegate = self;
         [self addAVPlayerLayer];
     }
     return self;
@@ -102,6 +107,15 @@ static NSString *playerBufferFull = @"playbackBufferFull";
     [_player seekToTime:newCMTime completionHandler:^(BOOL finished) {
         [self playVideo];
     }];
+}
+
+#pragma mark -------------------SF_SCREEN_CHANGED_DELEGATE-----------------
+- (void)sf_portraitScreenDelegate{
+    
+}
+
+- (void)sf_wholeScreenDelegate{
+    
 }
 #pragma mark ------------addView-----------------
 - (void)addVercialView{
@@ -214,11 +228,17 @@ static NSString *playerBufferFull = @"playbackBufferFull";
 - (void)changeVericalFrame{
     _playerLayer.frame = self.bounds;
     if ([self.subviews containsObject:self.toolVerticalView]) {
-        
+        self.toolVerticalView.hidden = NO;
+        [self.toolVerticalView selfAnimationWithShow];
     }
-    [self addVercialView];
 }
 
+- (void)changeWholeScreenFrame{
+    _playerLayer.frame = self.bounds;
+    if ([self.subviews containsObject:self.toolVerticalView]) {
+        self.toolVerticalView.hidden = YES;
+    }
+}
 #pragma mark -----------------init----------------------
 - (SFAVPlayerVerticalBottomView *)toolVerticalView{
     if (!_toolVerticalView) {

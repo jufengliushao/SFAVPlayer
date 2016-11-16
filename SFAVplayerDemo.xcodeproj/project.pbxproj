@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E62AFDDB1DDAAC1E00FF0621 /* SFAVplayerScreenDirectionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E62AFDDA1DDAAC1E00FF0621 /* SFAVplayerScreenDirectionTool.m */; };
 		FF6E98AA1DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6E98A91DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m */; };
 		FF7710151DD2C2CF00CAB2F4 /* waiting_1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF7710091DD2C2CF00CAB2F4 /* waiting_1.tiff */; };
 		FF7710161DD2C2CF00CAB2F4 /* waiting_10.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF77100A1DD2C2CF00CAB2F4 /* waiting_10.tiff */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E62AFDD91DDAAC1E00FF0621 /* SFAVplayerScreenDirectionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAVplayerScreenDirectionTool.h; sourceTree = "<group>"; };
+		E62AFDDA1DDAAC1E00FF0621 /* SFAVplayerScreenDirectionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAVplayerScreenDirectionTool.m; sourceTree = "<group>"; };
 		FF6E98A81DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAVPlayerVerticalBottomView.h; sourceTree = "<group>"; };
 		FF6E98A91DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAVPlayerVerticalBottomView.m; sourceTree = "<group>"; };
 		FF6E98AC1DCB3BF400F7CDA2 /* SFHelper.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFHelper.pch; sourceTree = "<group>"; };
@@ -117,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E62AFDD81DDAABFC00FF0621 /* SFAVplayerTool */ = {
+			isa = PBXGroup;
+			children = (
+				E62AFDD91DDAAC1E00FF0621 /* SFAVplayerScreenDirectionTool.h */,
+				E62AFDDA1DDAAC1E00FF0621 /* SFAVplayerScreenDirectionTool.m */,
+			);
+			path = SFAVplayerTool;
+			sourceTree = "<group>";
+		};
 		FF7710081DD2C2CF00CAB2F4 /* WaitingImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,9 +219,9 @@
 			children = (
 				FF8919361DB0B65300F7C7CA /* SFAVplayerView.h */,
 				FF8919371DB0B65300F7C7CA /* SFAVplayerView.m */,
+				E62AFDD81DDAABFC00FF0621 /* SFAVplayerTool */,
 				FF89192F1DB0B26800F7C7CA /* SFAVplayerModel */,
 				FF8919301DB0B26800F7C7CA /* SFAVplayerView */,
-				FF8919311DB0B26800F7C7CA /* SFAVplayerViewModel */,
 			);
 			path = SFAVPlayer;
 			sourceTree = "<group>";
@@ -231,13 +243,6 @@
 				FFA4274D1DCAE6ED0056902D /* SFAVPlayerVerticalBottomView.xib */,
 			);
 			path = SFAVplayerView;
-			sourceTree = "<group>";
-		};
-		FF8919311DB0B26800F7C7CA /* SFAVplayerViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SFAVplayerViewModel;
 			sourceTree = "<group>";
 		};
 		FF8919321DB0B28000F7C7CA /* SFHelper */ = {
@@ -404,6 +409,7 @@
 			files = (
 				FF8918F71DB0B06C00F7C7CA /* main.m in Sources */,
 				FFA427491DCACDAB0056902D /* SFAVplayModel.m in Sources */,
+				E62AFDDB1DDAAC1E00FF0621 /* SFAVplayerScreenDirectionTool.m in Sources */,
 				FF6E98AA1DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m in Sources */,
 				FF89192D1DB0B0DB00F7C7CA /* SFMainViewController.m in Sources */,
 				FF89192A1DB0B08700F7C7CA /* SFAVplayerAppDelegate.m in Sources */,
