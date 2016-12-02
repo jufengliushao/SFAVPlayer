@@ -22,6 +22,7 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     _screenTool = [SFAVplayerScreenDirectionTool sharedSingleton];
+    self.playBtn.selected = YES;
 }
 
 - (IBAction)screenAction:(id)sender {
@@ -35,6 +36,11 @@
 }
 
 - (IBAction)sliderAction:(id)sender {
+}
+
+- (IBAction)playAction:(id)sender {
+    // PAUSE or PLAY
+    
 }
 
 /*

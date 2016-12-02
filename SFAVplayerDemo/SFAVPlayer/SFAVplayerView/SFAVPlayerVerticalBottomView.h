@@ -24,7 +24,13 @@ typedef void(^PlaySliderBlock)(CGFloat);
 @property (nonatomic, copy) PlaySliderBlock playerSliderBlock;
 
 + (SFAVPlayerVerticalBottomView *)initForNib;
+
+/**
+ waiting image method
+ */
 - (void)selfAnimationWithShow;
 - (void)startImageViewAnimation;
 - (void)endImageViewAnimation;
+
+- (void)thePlayerButtonChangedStatus;
 @end

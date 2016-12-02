@@ -82,6 +82,7 @@ static SFAVplayerScreenDirectionTool *signalModel = nil;
         case UIDeviceOrientationLandscapeLeft:
         case UIDeviceOrientationLandscapeRight:{
             NSLog(@"横屏");
+            self.isWholeScreen = YES;
             if (_delegate && [_delegate respondsToSelector:@selector(sf_wholeScreenDelegate)]) {
                 [_delegate sf_wholeScreenDelegate];
             }
@@ -90,6 +91,7 @@ static SFAVplayerScreenDirectionTool *signalModel = nil;
             
         case UIDeviceOrientationPortrait:{
             NSLog(@"屏幕直立");
+            self.isWholeScreen = NO;
             if (_delegate && [_delegate respondsToSelector:@selector(sf_portraitScreenDelegate)]) {
                 [_delegate sf_portraitScreenDelegate];
             }
@@ -107,6 +109,7 @@ static SFAVplayerScreenDirectionTool *signalModel = nil;
             
         default:
             NSLog(@"无法辨识");
+            self.isWholeScreen = NO;
             break;
     }
     

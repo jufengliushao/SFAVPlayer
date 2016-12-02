@@ -1,24 +1,14 @@
 //
-//  SFAVplayerView.m
+//  SFAVplayerMainTool.m
 //  SFAVplayerDemo
 //
-//  Created by cnlive-lsf on 16/10/14.
+//  Created by cnlive-lsf on 2016/12/2.
 //  Copyright © 2016年 cnlive-lsf. All rights reserved.
 //
 
-#import "SFAVplayerView.h"
-#import <AVFoundation/AVFoundation.h>
-#import <MediaPlayer/MediaPlayer.h>
-#import <CoreMotion/CoreMotion.h>
+#import "SFAVplayerMainTool.h"
 
-#import "SFAVPlayerVerticalBottomView.h"
-
-static NSString *playerStatus = @"status";
-static NSString *playerBufferEmpty = @"playbackBufferEmpty";
-static NSString *playerKeepUp = @"playbackLikelyToKeepUp";
-static NSString *playerBufferFull = @"playbackBufferFull";
-
-@interface SFAVplayerView(){
+@interface SFAVplayerMainTool(){
     SFAVplayModel *_playerModel;
     CGFloat _videoTotalTime;
     CGFloat _playerCurrentRate; // 当前播放时间比例
@@ -29,40 +19,42 @@ static NSString *playerBufferFull = @"playbackBufferFull";
     AVPlayerItem *_playerItem;
     AVPlayerLayer *_playerLayer;
     NSTimer *_sliderTimer;
-    CMMotionManager *_motionManager;
     
-    /** Tool */
-    SFAVplayerScreenDirectionTool *_screenDirectionTool;
+    /** tool properties */
+    BOOL _isCreate;
 }
-
-@property (strong, nonatomic) SFAVPlayerVerticalBottomView *toolVerticalView;
 
 @end
 
-@implementation SFAVplayerView
-- (instancetype)initWithFrame:(CGRect)frame playerModel:(SFAVplayModel *)playerModel{
-    if (self = [super initWithFrame:frame]) {
-        _playerModel = playerModel;
-        _screenDirectionTool = [SFAVplayerScreenDirectionTool sharedSingleton];
-        [self addAVPlayerLayer];
-        [self addVercialView];
+static NSString *playerStatus = @"status";
+static NSString *playerBufferEmpty = @"playbackBufferEmpty";
+static NSString *playerKeepUp = @"playbackLikelyToKeepUp";
+static NSString *playerBufferFull = @"playbackBufferFull";
+static SFAVplayerMainTool *tool = nil;
+
+@implementation SFAVplayerMainTool
++ (instancetype)sharedSingleton{
+    @synchronized (self) {
+        if(tool == nil){
+            tool = [[SFAVplayerMainTool alloc] init];
+        }
+        return tool;
+    }
+}
+
+- (instancetype)init{
+    if (self = [super init]) {
+        _isCreate = NO;
     }
     return self;
 }
 
-#pragma mark --------------AVFun----------
+#pragma mark -----------------AVPlayer-------------------
 - (void)createAVPlayer{
-    _playerItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:_playerModel.videoURLStr]];
+    _playerItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:self.videoUrl]];
     _player = [AVPlayer playerWithPlayerItem:_playerItem];
     _playerLayer = [AVPlayerLayer playerLayerWithPlayer:_player];
     _playerLayer.videoGravity = AVLayerVideoGravityResize;
-}
-
-- (void)addAVPlayerLayer{
-    [self createAVPlayer];
-    [self.layer addSublayer:_playerLayer];
-    [self addObserver];
-    [self changeVericalFrame];
 }
 
 - (void)createSlierTimer{
@@ -79,16 +71,15 @@ static NSString *playerBufferFull = @"playbackBufferFull";
     [_player play];
     [self createSlierTimer];
     _sumOfVideoTime = [self totalSumTime];
-    [self.toolVerticalView thePlayerButtonChangedStatus];
 }
 
 - (void)stopPlayVideo{
     // 暂停播放
     [_player pause];
-    [self.toolVerticalView thePlayerButtonChangedStatus];
     [self removeSliderTimer];
     
 }
+
 #pragma mark ------------Action-------------------
 - (void)playerPlayingAction{
     if (_player.currentItem.duration.timescale != 0) {
@@ -107,46 +98,6 @@ static NSString *playerBufferFull = @"playbackBufferFull";
     [_player seekToTime:newCMTime completionHandler:^(BOOL finished) {
         [self playVideo];
     }];
-}
-
-#pragma mark -------------------SF_SCREEN_CHANGED_DELEGATE-----------------
-- (void)portraitScreenDelegate{
-    if (self.toolVerticalView.isHidden) {
-        // 切换为小屏幕
-        self.toolVerticalView.hidden = NO;
-        _playerLayer.frame = self.bounds;
-    }
-}
-
-- (void)wholeScreenDelegate{
-    if (!self.toolVerticalView.isHidden) {
-        // 切换为全屏
-        self.toolVerticalView.hidden = YES;
-        _playerLayer.frame = self.bounds;
-    }
-}
-#pragma mark ------------addView-----------------
-- (void)addVercialView{
-    [self addSubview:self.toolVerticalView];
-    __block SFAVplayerView *blockSelf = self;
-    self.toolVerticalView.becomeWholeScreen = ^(){
-        // whole screen
-    };
-    
-    self.toolVerticalView.playerBtnBlock = ^(UIButton *sender){
-      // click player button
-        if (sender.selected) {
-            // start play
-            [blockSelf playVideo];
-        }else{
-            // pasue play
-            [blockSelf stopPlayVideo];
-        }
-    };
-    
-    self.toolVerticalView.playerSliderBlock = ^(CGFloat value){
-        [blockSelf changeVideoPlayerTime:value];
-    };
 }
 
 #pragma mark ---------------observer------------
@@ -175,21 +126,21 @@ static NSString *playerBufferFull = @"playbackBufferFull";
         NSLog(@"playerBufferEmpty");
         if (_player.currentItem.playbackBufferEmpty) {
             // 卡顿
-            [self.toolVerticalView startImageViewAnimation];
-            [self stopPlayVideo];
+//            [self.toolVerticalView startImageViewAnimation];
+//            [self stopPlayVideo];
         }
     }
     
     if (object == _player.currentItem && [playerBufferFull isEqualToString:keyPath]) {
-         NSLog(@"playerBufferFull");
+        NSLog(@"playerBufferFull");
     }
     
     if (object == _player.currentItem && [playerKeepUp isEqualToString:keyPath]) {
-         NSLog(@"playerKeepUp");
+        NSLog(@"playerKeepUp");
         if (_player.currentItem.playbackLikelyToKeepUp) {
             // 可以播放
-            [self.toolVerticalView endImageViewAnimation];
-            [self playVideo];
+//            [self.toolVerticalView endImageViewAnimation];
+//            [self playVideo];
         }
     }
 }
@@ -203,7 +154,7 @@ static NSString *playerBufferFull = @"playbackBufferFull";
             
         case AVPlayerStatusReadyToPlay:{
             NSLog(@"AVPlayerStatusReadyToPlay");
-            [self playVideo];
+//            [self playVideo];
         }
             break;
             
@@ -221,46 +172,29 @@ static NSString *playerBufferFull = @"playbackBufferFull";
 
 #pragma mark ----------------tool---------------------
 // 返回播放的总时间
-- (CGFloat)totalSumTime{
-    return (CGFloat)_playerItem.duration.value/_playerItem.duration.timescale;
+- (long)totalSumTime{
+    return _playerItem.duration.value/_playerItem.duration.timescale;
 }
 
 - (void)setPlayerToolViewTimeShow{
     NSString *totalMin = [NSString stringWithFormat:@"%02d:%02d", (int)floor(_sumOfVideoTime / 60), (int)((int)_sumOfVideoTime % 60)];
     int currentSeconds = floor(_sumOfVideoTime * _playerCurrentRate);
     NSString *curMin = [NSString stringWithFormat:@"%02d:%02d", (int)floor(currentSeconds / 60), (int)((int)currentSeconds % 60)];
-    self.toolVerticalView.smallToolView.timeLabel.text = [NSString stringWithFormat:@"%@/%@", curMin, totalMin];
-}
-
-#pragma mark ---------------frame-------------------
-- (void)changeVericalFrame{
-    _playerLayer.frame = self.bounds;
-    if ([self.subviews containsObject:self.toolVerticalView]) {
-        self.toolVerticalView.hidden = NO;
-        [self.toolVerticalView selfAnimationWithShow];
+    // pass value
+    if (self.sf_sliderTimeBlock) {
+        self.sf_sliderTimeBlock(curMin, totalMin);
     }
 }
 
-- (void)changeWholeScreenFrame{
-    _playerLayer.frame = self.bounds;
-    if ([self.subviews containsObject:self.toolVerticalView]) {
-        self.toolVerticalView.hidden = YES;
+#pragma mark --------------------re-write get--------------------
+- (AVPlayerLayer *)sfPlayerLayer{
+    if (!_isCreate) {
+        [self createAVPlayer];
     }
+    return _playerLayer;
 }
-#pragma mark -----------------init----------------------
-- (SFAVPlayerVerticalBottomView *)toolVerticalView{
-    if (!_toolVerticalView) {
-        _toolVerticalView = [SFAVPlayerVerticalBottomView initForNib];
-        _toolVerticalView.frame = self.bounds;
-    }
-    return _toolVerticalView;
-}
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
+- (long)sfVideoSumTime{
+    return [self totalSumTime];
+}
 @end

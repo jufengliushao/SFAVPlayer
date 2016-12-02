@@ -46,7 +46,7 @@
                 <outlet property="bottomView" destination="aEp-Mn-QtD" id="1Ye-xQ-7zO"/>
                 <outlet property="waitImageView" destination="Adx-zb-Urp" id="LIj-SD-xAi"/>
             </connections>
-            <point key="canvasLocation" x="-245" y="315"/>
+            <point key="canvasLocation" x="-290" y="315"/>
         </view>
     </objects>
 </document>

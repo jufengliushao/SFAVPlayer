@@ -19,6 +19,10 @@ typedef void(^SFScreenPortraitBlock)();
 
 @interface SFAVplayerScreenDirectionTool : NSObject
 @property (nonatomic, assign) id<SF_SCREEN_CHANGED_DELEGATE>delegate;
+/**
+ the screen status YES -> whole screen
+ */
+@property (nonatomic, assign) BOOL isWholeScreen;
 
 +(instancetype)sharedSingleton;
 

@@ -53,6 +53,17 @@
         self.playerBtnBlock(sender);
     }
 }
+
+#pragma mark ---------------Tool----------------
+- (void)thePlayerButtonChangedStatus{
+    if ([SFAVplayerScreenDirectionTool sharedSingleton].isWholeScreen) {
+        // whole screen
+    }else{
+        // small tool view
+        self.smallToolView.playBtn.selected = !self.smallToolView.playBtn.selected;
+    }
+}
+
 #pragma mark ------------Animation--------------
 - (void)selfAnimationWithShow{
     CGFloat alpha = 1.0;
