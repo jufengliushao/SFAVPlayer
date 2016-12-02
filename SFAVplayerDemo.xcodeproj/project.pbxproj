@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E61539931DF10C2400EBBC05 /* SFAVplayerMarkBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61539921DF10C2400EBBC05 /* SFAVplayerMarkBottomView.m */; };
 		E62AFDDB1DDAAC1E00FF0621 /* SFAVplayerScreenDirectionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E62AFDDA1DDAAC1E00FF0621 /* SFAVplayerScreenDirectionTool.m */; };
+		E659790A1DDD5F14001BED06 /* SFAVPlayerSmallScreenToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = E65979091DDD5F14001BED06 /* SFAVPlayerSmallScreenToolView.m */; };
+		E659790C1DDD5F22001BED06 /* SFAVPlayerSmallScreenToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E659790B1DDD5F22001BED06 /* SFAVPlayerSmallScreenToolView.xib */; };
 		FF6E98AA1DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6E98A91DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m */; };
 		FF7710151DD2C2CF00CAB2F4 /* waiting_1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF7710091DD2C2CF00CAB2F4 /* waiting_1.tiff */; };
 		FF7710161DD2C2CF00CAB2F4 /* waiting_10.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF77100A1DD2C2CF00CAB2F4 /* waiting_10.tiff */; };
@@ -53,8 +56,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E61539911DF10C2400EBBC05 /* SFAVplayerMarkBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAVplayerMarkBottomView.h; sourceTree = "<group>"; };
+		E61539921DF10C2400EBBC05 /* SFAVplayerMarkBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAVplayerMarkBottomView.m; sourceTree = "<group>"; };
 		E62AFDD91DDAAC1E00FF0621 /* SFAVplayerScreenDirectionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAVplayerScreenDirectionTool.h; sourceTree = "<group>"; };
 		E62AFDDA1DDAAC1E00FF0621 /* SFAVplayerScreenDirectionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAVplayerScreenDirectionTool.m; sourceTree = "<group>"; };
+		E64C97A01DF04E5000B442C3 /* SFProjectHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFProjectHeader.h; sourceTree = "<group>"; };
+		E65979081DDD5F14001BED06 /* SFAVPlayerSmallScreenToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAVPlayerSmallScreenToolView.h; sourceTree = "<group>"; };
+		E65979091DDD5F14001BED06 /* SFAVPlayerSmallScreenToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAVPlayerSmallScreenToolView.m; sourceTree = "<group>"; };
+		E659790B1DDD5F22001BED06 /* SFAVPlayerSmallScreenToolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFAVPlayerSmallScreenToolView.xib; sourceTree = "<group>"; };
 		FF6E98A81DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAVPlayerVerticalBottomView.h; sourceTree = "<group>"; };
 		FF6E98A91DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAVPlayerVerticalBottomView.m; sourceTree = "<group>"; };
 		FF6E98AC1DCB3BF400F7CDA2 /* SFHelper.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFHelper.pch; sourceTree = "<group>"; };
@@ -120,6 +129,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E61539901DF10B4200EBBC05 /* SFAVplayerEmptyMarkView */ = {
+			isa = PBXGroup;
+			children = (
+				E61539911DF10C2400EBBC05 /* SFAVplayerMarkBottomView.h */,
+				E61539921DF10C2400EBBC05 /* SFAVplayerMarkBottomView.m */,
+			);
+			path = SFAVplayerEmptyMarkView;
+			sourceTree = "<group>";
+		};
 		E62AFDD81DDAABFC00FF0621 /* SFAVplayerTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,9 +256,13 @@
 		FF8919301DB0B26800F7C7CA /* SFAVplayerView */ = {
 			isa = PBXGroup;
 			children = (
+				E61539901DF10B4200EBBC05 /* SFAVplayerEmptyMarkView */,
 				FF6E98A81DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.h */,
 				FF6E98A91DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m */,
 				FFA4274D1DCAE6ED0056902D /* SFAVPlayerVerticalBottomView.xib */,
+				E65979081DDD5F14001BED06 /* SFAVPlayerSmallScreenToolView.h */,
+				E65979091DDD5F14001BED06 /* SFAVPlayerSmallScreenToolView.m */,
+				E659790B1DDD5F22001BED06 /* SFAVPlayerSmallScreenToolView.xib */,
 			);
 			path = SFAVplayerView;
 			sourceTree = "<group>";
@@ -249,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				FF6E98AC1DCB3BF400F7CDA2 /* SFHelper.pch */,
+				E64C97A01DF04E5000B442C3 /* SFProjectHeader.h */,
 			);
 			path = SFHelper;
 			sourceTree = "<group>";
@@ -373,6 +396,7 @@
 				FF7710171DD2C2CF00CAB2F4 /* waiting_11.tiff in Resources */,
 				FF7710161DD2C2CF00CAB2F4 /* waiting_10.tiff in Resources */,
 				FF77101C1DD2C2CF00CAB2F4 /* waiting_5.tiff in Resources */,
+				E659790C1DDD5F22001BED06 /* SFAVPlayerSmallScreenToolView.xib in Resources */,
 				FF7710181DD2C2CF00CAB2F4 /* waiting_12.tiff in Resources */,
 				FF7710191DD2C2CF00CAB2F4 /* waiting_2.tiff in Resources */,
 				FFA4274E1DCAE6ED0056902D /* SFAVPlayerVerticalBottomView.xib in Resources */,
@@ -408,7 +432,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF8918F71DB0B06C00F7C7CA /* main.m in Sources */,
+				E659790A1DDD5F14001BED06 /* SFAVPlayerSmallScreenToolView.m in Sources */,
 				FFA427491DCACDAB0056902D /* SFAVplayModel.m in Sources */,
+				E61539931DF10C2400EBBC05 /* SFAVplayerMarkBottomView.m in Sources */,
 				E62AFDDB1DDAAC1E00FF0621 /* SFAVplayerScreenDirectionTool.m in Sources */,
 				FF6E98AA1DCB2E6A00F7CDA2 /* SFAVPlayerVerticalBottomView.m in Sources */,
 				FF89192D1DB0B0DB00F7C7CA /* SFMainViewController.m in Sources */,

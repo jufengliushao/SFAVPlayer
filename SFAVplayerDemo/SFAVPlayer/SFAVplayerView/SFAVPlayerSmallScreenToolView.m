@@ -1,0 +1,48 @@
+//
+//  SFAVPlayerSmallScreenToolView.m
+//  SFAVplayerDemo
+//
+//  Created by cnlive-lsf on 2016/11/17.
+//  Copyright © 2016年 cnlive-lsf. All rights reserved.
+//
+
+#import "SFAVPlayerSmallScreenToolView.h"
+
+@interface SFAVPlayerSmallScreenToolView(){
+    SFAVplayerScreenDirectionTool *_screenTool;
+}
+@end
+
+@implementation SFAVPlayerSmallScreenToolView
++ (SFAVPlayerSmallScreenToolView *)initForNib{
+    NSArray *nibArr = [[NSBundle mainBundle] loadNibNamed:@"SFAVPlayerSmallScreenToolView" owner:nil options:nil];
+    return nibArr[0];
+}
+
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    _screenTool = [SFAVplayerScreenDirectionTool sharedSingleton];
+}
+
+- (IBAction)screenAction:(id)sender {
+    if (self.screenBtn.isSelected) {
+        // whole screen -> pro screen
+        
+    }else{
+        // pro screen -> whole screen
+        [_screenTool startMotionManager];
+    }
+}
+
+- (IBAction)sliderAction:(id)sender {
+}
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+
+@end

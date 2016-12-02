@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "SFAVplayModel.h"
-#import "SFAVplayerScreenDirectionTool.h"
+
 @interface SFAVplayerView : UIView
 - (instancetype)initWithFrame:(CGRect)frame playerModel:(SFAVplayModel *)playerModel;
 
 - (void)playVideo;
 - (void)stopPlayVideo;
+
+- (void)portraitScreenDelegate;
+- (void)wholeScreenDelegate;
 @end

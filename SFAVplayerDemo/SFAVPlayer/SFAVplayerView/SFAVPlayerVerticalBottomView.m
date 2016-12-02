@@ -8,8 +8,11 @@
 
 #import "SFAVPlayerVerticalBottomView.h"
 
+
 @interface SFAVPlayerVerticalBottomView()<UIGestureRecognizerDelegate>{
     NSMutableArray *_imgAnimationArr;
+    NSArray *_hiddenViewArr;
+    UIView *_currentToolView;
 }
 @end
 
@@ -23,15 +26,12 @@
     [super awakeFromNib];
     self.alpha = 1.0;
     self.backgroundColor = [UIColor clearColor];
-    self.playerBtn.selected = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selfAnimationWithShow)];
     tap.numberOfTapsRequired = 1;
     tap.numberOfTouchesRequired = 1;
     tap.delegate = self;
-    [self addGestureRecognizer:tap];
-    
-    [self.timeSlider setThumbImage:[UIImage imageNamed:@"播放器圆圈"] forState:(UIControlStateNormal)];
-    
+    [self.bottomView addGestureRecognizer:tap];
+    _currentToolView = self.smallToolView;
     [self addImage];
     self.waitImageView.hidden = YES;
 }
@@ -45,9 +45,7 @@
 }
 
 - (IBAction)changeValue:(id)sender {
-    if (self.playerSliderBlock) {
-        self.playerSliderBlock(self.timeSlider.value);
-    }
+    
 }
 
 - (IBAction)playerAction:(id)sender {
@@ -57,18 +55,19 @@
 }
 #pragma mark ------------Animation--------------
 - (void)selfAnimationWithShow{
-    CGFloat alpha = 0.0;
-    if (self.alpha != 1.0) {
-        alpha = 1.0;
+    CGFloat alpha = 1.0;
+    if (_currentToolView.alpha) {
+        // show -> hidden tool view
+        alpha = 0.0;
     }
     [UIView animateWithDuration:1.f animations:^{
-        self.alpha = alpha;
+        _currentToolView.alpha = alpha;
     }];
 }
 
 #pragma mark ----------------UIGestureRecognizerDelegate-------------------
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
-    if ([NSStringFromClass([touch.view class]) isEqualToString:@"SFAVPlayerVerticalBottomView"]) {
+    if ([NSStringFromClass([touch.view class]) isEqualToString:@"SFAVPlayerSmallScreenToolView"] || [NSStringFromClass([touch.view class]) isEqualToString:@"SFAVplayerMarkBottomView"]) {
         return YES;
     }
     return NO;
@@ -94,6 +93,16 @@
 - (void)endImageViewAnimation{
     [self.waitImageView stopAnimating];
     self.waitImageView.hidden = YES;
+}
+
+#pragma mark --------------------init------------------
+- (SFAVPlayerSmallScreenToolView *)smallToolView{
+    if(!_smallToolView){
+        _smallToolView = [SFAVPlayerSmallScreenToolView initForNib];
+        _smallToolView.frame = self.bounds;
+        [self.bottomView addSubview:_smallToolView];
+    }
+    return _smallToolView;
 }
 /*
 // Only override drawRect: if you perform custom drawing.

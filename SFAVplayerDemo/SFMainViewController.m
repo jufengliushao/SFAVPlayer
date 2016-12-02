@@ -36,11 +36,15 @@
 
 #pragma mark ------------SF_SCREEN_CHANGED_DELEGATE----------
 - (void)sf_wholeScreenDelegate{
-    
+    // 切换为全屏
+    self.playerView.frame =CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+    [self.playerView wholeScreenDelegate];
 }
 
 - (void)sf_portraitScreenDelegate{
-    
+    // 切换为竖屏
+    self.playerView.frame =CGRectMake(0, 20, kScreenWidth, 200);
+    [self.playerView portraitScreenDelegate];
 }
 
 #pragma mark ------------------init-------------------

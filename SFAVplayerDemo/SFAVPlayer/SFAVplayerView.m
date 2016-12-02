@@ -18,7 +18,7 @@ static NSString *playerBufferEmpty = @"playbackBufferEmpty";
 static NSString *playerKeepUp = @"playbackLikelyToKeepUp";
 static NSString *playerBufferFull = @"playbackBufferFull";
 
-@interface SFAVplayerView()<SF_SCREEN_CHANGED_DELEGATE>{
+@interface SFAVplayerView(){
     SFAVplayModel *_playerModel;
     CGFloat _videoTotalTime;
     CGFloat _playerCurrentRate; // 当前播放时间比例
@@ -44,8 +44,8 @@ static NSString *playerBufferFull = @"playbackBufferFull";
     if (self = [super initWithFrame:frame]) {
         _playerModel = playerModel;
         _screenDirectionTool = [SFAVplayerScreenDirectionTool sharedSingleton];
-        _screenDirectionTool.delegate = self;
         [self addAVPlayerLayer];
+        [self addVercialView];
     }
     return self;
 }
@@ -79,13 +79,13 @@ static NSString *playerBufferFull = @"playbackBufferFull";
     [_player play];
     [self createSlierTimer];
     _sumOfVideoTime = [self totalSumTime];
-    self.toolVerticalView.playerBtn.selected = NO;
+//    self.toolVerticalView.playerBtn.selected = NO;
 }
 
 - (void)stopPlayVideo{
     // 暂停播放
     [_player pause];
-    self.toolVerticalView.playerBtn.selected = YES;
+//    self.toolVerticalView.playerBtn.selected = YES;
     [self removeSliderTimer];
     
 }
@@ -110,12 +110,20 @@ static NSString *playerBufferFull = @"playbackBufferFull";
 }
 
 #pragma mark -------------------SF_SCREEN_CHANGED_DELEGATE-----------------
-- (void)sf_portraitScreenDelegate{
-    
+- (void)portraitScreenDelegate{
+    if (self.toolVerticalView.isHidden) {
+        // 切换为小屏幕
+        self.toolVerticalView.hidden = NO;
+        _playerLayer.frame = self.bounds;
+    }
 }
 
-- (void)sf_wholeScreenDelegate{
-    
+- (void)wholeScreenDelegate{
+    if (!self.toolVerticalView.isHidden) {
+        // 切换为全屏
+        self.toolVerticalView.hidden = YES;
+        _playerLayer.frame = self.bounds;
+    }
 }
 #pragma mark ------------addView-----------------
 - (void)addVercialView{
@@ -221,7 +229,7 @@ static NSString *playerBufferFull = @"playbackBufferFull";
     NSString *totalMin = [NSString stringWithFormat:@"%02d:%02d", (int)floor(_sumOfVideoTime / 60), (int)((int)_sumOfVideoTime % 60)];
     int currentSeconds = floor(_sumOfVideoTime * _playerCurrentRate);
     NSString *curMin = [NSString stringWithFormat:@"%02d:%02d", (int)floor(currentSeconds / 60), (int)((int)currentSeconds % 60)];
-    self.toolVerticalView.timeLabel.text = [NSString stringWithFormat:@"%@/%@", curMin, totalMin];
+    self.toolVerticalView.smallToolView.timeLabel.text = [NSString stringWithFormat:@"%@/%@", curMin, totalMin];
 }
 
 #pragma mark ---------------frame-------------------
