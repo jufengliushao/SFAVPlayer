@@ -40,7 +40,14 @@
 
 - (IBAction)playAction:(id)sender {
     // PAUSE or PLAY
-    
+    if(self.playBtn.isSelected){
+        // pause -> play
+        [[SFAVplayerMainTool sharedSingleton] playVideo];
+    }else{
+        // play -> pause
+        [[SFAVplayerMainTool sharedSingleton] stopPlayVideo];
+    }
+    self.playBtn.selected = !self.playBtn.selected;
 }
 
 /*

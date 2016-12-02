@@ -13,7 +13,13 @@
 
 #import "SFAVplayModel.h"
 
-typedef void(^SF_SliderTimeBlock)(NSString *, NSString *);
+typedef NS_ENUM(NSInteger, SFPlayerStatus) {
+    SF_WEDGE_PLAYERSTATUS, /** 播放卡顿 the video wedge */
+    SF_PLAYING_PLAYERSTATUS, /** 播放中 video playing */
+    SF_PAUSE_PLAYERSTATUS /** 暂停 video pause */
+};
+
+typedef void(^SF_SliderTimeBlock)(NSString *, NSString *, CGFloat);
 
 @interface SFAVplayerMainTool : NSObject
 
@@ -21,7 +27,7 @@ typedef void(^SF_SliderTimeBlock)(NSString *, NSString *);
 
 @property (nonatomic, strong, readonly) AVPlayerLayer *sfPlayerLayer; /** return player Attention: before get this property, you must set videoUrl first */
 @property (nonatomic, assign, readonly) long sfVideoSumTime; /** return player total time second */
-
+@property (nonatomic, assign, readonly) SFPlayerStatus sfPlayerStatus; /** get the play current status */
 
 /**
  pass the total time string and current time string default: 00:00/00:00

@@ -13,6 +13,12 @@
     NSMutableArray *_imgAnimationArr;
     NSArray *_hiddenViewArr;
     UIView *_currentToolView;
+    SFAVplayerMainTool *_playerMainTool;
+    
+    /** change time*/
+    NSString *_currTime;
+    NSString *_totalTime;
+    CGFloat _currRate;
 }
 @end
 
@@ -34,6 +40,7 @@
     _currentToolView = self.smallToolView;
     [self addImage];
     self.waitImageView.hidden = YES;
+    [self setCurrentTime];
 }
 
 #pragma mark ---------------action----------------
@@ -64,6 +71,26 @@
     }
 }
 
+- (void)setCurrentTime{
+    _playerMainTool = [SFAVplayerMainTool sharedSingleton];
+    __block SFAVPlayerVerticalBottomView *blockSelf = self;
+    _playerMainTool.sf_sliderTimeBlock = ^(NSString *curStr, NSString *totalStr, CGFloat currentRate){
+        _currRate = currentRate;
+        _currTime = curStr;
+        _totalTime = totalStr;
+        [blockSelf setPlayerData];
+    };
+}
+
+- (void)setPlayerData{
+    if ([SFAVplayerScreenDirectionTool sharedSingleton].isWholeScreen) {
+        // whole screen
+    }else{
+        // small tool
+        self.smallToolView.videoSlider.value = _currRate;
+        self.smallToolView.timeLabel.text = [NSString stringWithFormat:@"%@/%@", _currTime, _totalTime];
+    }
+}
 #pragma mark ------------Animation--------------
 - (void)selfAnimationWithShow{
     CGFloat alpha = 1.0;

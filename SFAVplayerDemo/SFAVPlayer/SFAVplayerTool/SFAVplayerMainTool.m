@@ -22,6 +22,7 @@
     
     /** tool properties */
     BOOL _isCreate;
+    SFPlayerStatus _playerStatus;
 }
 
 @end
@@ -45,6 +46,7 @@ static SFAVplayerMainTool *tool = nil;
 - (instancetype)init{
     if (self = [super init]) {
         _isCreate = NO;
+        _playerStatus = SF_PAUSE_PLAYERSTATUS;
     }
     return self;
 }
@@ -62,6 +64,7 @@ static SFAVplayerMainTool *tool = nil;
 }
 
 - (void)removeSliderTimer{
+    [_sliderTimer invalidate];
     _sliderTimer = nil;
 }
 
@@ -182,7 +185,7 @@ static SFAVplayerMainTool *tool = nil;
     NSString *curMin = [NSString stringWithFormat:@"%02d:%02d", (int)floor(currentSeconds / 60), (int)((int)currentSeconds % 60)];
     // pass value
     if (self.sf_sliderTimeBlock) {
-        self.sf_sliderTimeBlock(curMin, totalMin);
+        self.sf_sliderTimeBlock(curMin, totalMin, _playerCurrentRate);
     }
 }
 

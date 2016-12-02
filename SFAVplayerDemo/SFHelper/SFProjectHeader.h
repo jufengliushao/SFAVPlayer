@@ -10,5 +10,6 @@
 #define SFProjectHeader_h
 
 #import "SFAVplayerScreenDirectionTool.h"
+#import "SFAVplayerMainTool.h"
 
 #endif /* SFProjectHeader_h */
