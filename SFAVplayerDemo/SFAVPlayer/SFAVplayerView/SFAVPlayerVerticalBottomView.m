@@ -49,13 +49,12 @@
     if ([SFAVplayerScreenDirectionTool sharedSingleton].isWholeScreen) {
         // whole screen
         self.smallToolView.alpha = 0.0;
-//        self.smallToolView.hidden = YES;
         _currentToolView = self.wholeToolView;
         [self.wholeToolView checkupTheStates];
     }else{
-//         small screen
+        // small screen
         self.wholeToolView.alpha = 0.0;
-//        self.wholeToolView.hidden = YES;
+        self.wholeToolView.videoTitleLabel.text = self.videoModel.videoTitle;
         _currentToolView = self.smallToolView;
         [self.smallToolView checkupTheStates];
     }

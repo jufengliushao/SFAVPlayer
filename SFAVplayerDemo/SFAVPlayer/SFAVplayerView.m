@@ -49,16 +49,8 @@ static NSString *playerBufferFull = @"playbackBufferFull";
 }
 
 #pragma mark ----------AVPlayerAction------------
-//- (void)playVideo{
-//    // 开始播放
-////    _sumOfVideoTime = [self totalSumTime];
-//    [self.toolVerticalView thePlayerButtonChangedStatus];
-//}
-//
-//- (void)stopPlayVideo{
-//    // 暂停播放
-//    [self.toolVerticalView thePlayerButtonChangedStatus];
-//}
+
+
 #pragma mark ------------Action-------------------
 - (void)addPlayer{
     _playerMainTool.videoUrl = _playerModel.videoURLStr;
@@ -91,6 +83,7 @@ static NSString *playerBufferFull = @"playbackBufferFull";
 }
 #pragma mark ------------addView-----------------
 - (void)addVercialView{
+    self.toolVerticalView.videoModel = _playerModel;
     [self addSubview:self.toolVerticalView];
 }
 

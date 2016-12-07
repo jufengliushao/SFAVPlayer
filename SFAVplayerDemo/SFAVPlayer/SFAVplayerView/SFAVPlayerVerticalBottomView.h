@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SFAVPlayerSmallScreenToolView.h"
 #import "SFAVplayerWholeScreenToolView.h"
+#import "SFAVplayModel.h"
 
 typedef void(^PlaySliderBlock)(CGFloat);
 
@@ -16,8 +17,9 @@ typedef void(^PlaySliderBlock)(CGFloat);
 @property (weak, nonatomic) IBOutlet UIImageView *waitImageView;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 
-@property (nonatomic, strong) SFAVPlayerSmallScreenToolView *smallToolView;
-@property (nonatomic, strong) SFAVplayerWholeScreenToolView *wholeToolView;
+@property (nonatomic, strong) SFAVplayModel *videoModel;
+@property (nonatomic, strong) SFAVPlayerSmallScreenToolView *smallToolView;/** small tool view*/
+@property (nonatomic, strong) SFAVplayerWholeScreenToolView *wholeToolView;/** whole tool view */
 
 @property (nonatomic, copy) PlaySliderBlock playerSliderBlock;
 

@@ -13,5 +13,9 @@
 @interface SFAVplayerView : UIView
 - (instancetype)initWithFrame:(CGRect)frame playerModel:(SFAVplayModel *)playerModel;
 
+
+/**
+ change the screen (half screen or whole screen)
+ */
 - (void)setChangedScreen;
 @end
