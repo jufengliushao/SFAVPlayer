@@ -78,6 +78,7 @@
                             <state key="normal" image="全屏收起">
                                 <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="selected" image="全屏展开"/>
                             <connections>
                                 <action selector="screenChangedAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mj4-T7-Fqc"/>
                             </connections>
@@ -97,15 +98,32 @@
                         <constraint firstAttribute="bottom" secondItem="uaQ-na-xiP" secondAttribute="bottom" id="rjK-uV-Doe"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wg1-al-doR">
+                    <rect key="frame" x="325" y="114" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="Qgb-hv-Ls7"/>
+                        <constraint firstAttribute="width" secondItem="wg1-al-doR" secondAttribute="height" multiplier="1:1" id="XWy-ap-Vw9"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" image="视频暂停">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="视频播放"/>
+                    <connections>
+                        <action selector="playAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="tIU-xp-bh5"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="xuw-HH-t6v" secondAttribute="trailing" id="2af-eo-MAJ"/>
                 <constraint firstItem="xuw-HH-t6v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4hV-Ke-7Y0"/>
+                <constraint firstItem="xuw-HH-t6v" firstAttribute="top" secondItem="wg1-al-doR" secondAttribute="bottom" constant="10" id="Ful-Nz-1J5"/>
                 <constraint firstItem="72p-sS-k5r" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.18" id="HAs-Rj-416"/>
                 <constraint firstItem="72p-sS-k5r" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Kfa-57-nwt"/>
                 <constraint firstItem="72p-sS-k5r" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NQU-WN-OzY"/>
                 <constraint firstAttribute="bottom" secondItem="xuw-HH-t6v" secondAttribute="bottom" id="lm6-7R-28m"/>
+                <constraint firstAttribute="trailing" secondItem="wg1-al-doR" secondAttribute="trailing" constant="15" id="nbf-pL-3Dy"/>
                 <constraint firstItem="xuw-HH-t6v" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.18" id="osP-dc-amf"/>
                 <constraint firstAttribute="trailing" secondItem="72p-sS-k5r" secondAttribute="trailing" id="vSj-XN-tLZ"/>
             </constraints>
@@ -114,6 +132,7 @@
                 <outlet property="backButton" destination="k18-l5-RYk" id="GPq-2t-bSP"/>
                 <outlet property="bottomView" destination="xuw-HH-t6v" id="eDG-S5-Yk3"/>
                 <outlet property="logoLabel" destination="YUI-Pe-pvS" id="NYh-Ii-x0J"/>
+                <outlet property="playBtn" destination="wg1-al-doR" id="5Fv-er-ceR"/>
                 <outlet property="screenButton" destination="uaQ-na-xiP" id="rh2-XG-nd8"/>
                 <outlet property="timeLabel" destination="D4V-XC-tVK" id="nac-hj-vdN"/>
                 <outlet property="topView" destination="72p-sS-k5r" id="O8v-hJ-CKT"/>
@@ -124,7 +143,10 @@
         </view>
     </objects>
     <resources>
+        <image name="全屏展开" width="24" height="24"/>
         <image name="全屏收起" width="16" height="16"/>
+        <image name="视频播放" width="32" height="32"/>
+        <image name="视频暂停" width="32" height="32"/>
         <image name="返回按钮" width="24" height="24"/>
     </resources>
 </document>

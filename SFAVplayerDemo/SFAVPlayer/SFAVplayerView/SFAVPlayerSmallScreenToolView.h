@@ -17,4 +17,5 @@
 
 
 + (SFAVPlayerSmallScreenToolView *)initForNib;
+- (void)checkupTheStates;
 @end

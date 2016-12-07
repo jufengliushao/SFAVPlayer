@@ -74,13 +74,14 @@ static SFAVplayerMainTool *tool = nil;
     [_player play];
     [self createSlierTimer];
     _sumOfVideoTime = [self totalSumTime];
+    _sfPlayerStatus = SF_PLAYING_PLAYERSTATUS;
 }
 
 - (void)stopPlayVideo{
     // 暂停播放
     [_player pause];
     [self removeSliderTimer];
-    
+    _sfPlayerStatus = SF_PAUSE_PLAYERSTATUS;
 }
 
 #pragma mark ------------Action-------------------

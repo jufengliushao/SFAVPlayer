@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UISlider *videoSlider;
 @property (weak, nonatomic) IBOutlet UIButton *screenButton;
+@property (weak, nonatomic) IBOutlet UIButton *playBtn;
 
-
++ (SFAVplayerWholeScreenToolView *)initForNib;
+- (void)checkupTheStates;
 @end

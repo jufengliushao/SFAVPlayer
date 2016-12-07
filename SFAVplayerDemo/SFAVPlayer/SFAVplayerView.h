@@ -13,9 +13,5 @@
 @interface SFAVplayerView : UIView
 - (instancetype)initWithFrame:(CGRect)frame playerModel:(SFAVplayModel *)playerModel;
 
-- (void)playVideo;
-- (void)stopPlayVideo;
-
-- (void)portraitScreenDelegate;
-- (void)wholeScreenDelegate;
+- (void)setChangedScreen;
 @end

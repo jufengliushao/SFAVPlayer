@@ -49,16 +49,16 @@ static NSString *playerBufferFull = @"playbackBufferFull";
 }
 
 #pragma mark ----------AVPlayerAction------------
-- (void)playVideo{
-    // 开始播放
-//    _sumOfVideoTime = [self totalSumTime];
-    [self.toolVerticalView thePlayerButtonChangedStatus];
-}
-
-- (void)stopPlayVideo{
-    // 暂停播放
-    [self.toolVerticalView thePlayerButtonChangedStatus];
-}
+//- (void)playVideo{
+//    // 开始播放
+////    _sumOfVideoTime = [self totalSumTime];
+//    [self.toolVerticalView thePlayerButtonChangedStatus];
+//}
+//
+//- (void)stopPlayVideo{
+//    // 暂停播放
+//    [self.toolVerticalView thePlayerButtonChangedStatus];
+//}
 #pragma mark ------------Action-------------------
 - (void)addPlayer{
     _playerMainTool.videoUrl = _playerModel.videoURLStr;
@@ -68,38 +68,30 @@ static NSString *playerBufferFull = @"playbackBufferFull";
 }
 #pragma mark -------------------SF_SCREEN_CHANGED_DELEGATE-----------------
 - (void)portraitScreenDelegate{
-    if (self.toolVerticalView.isHidden) {
-        // 切换为小屏幕
-        self.toolVerticalView.hidden = NO;
-        _playerLayer.frame = self.bounds;
-    }
+    // 切换为小屏幕
+    _playerLayer.frame = self.bounds;
+    [self.toolVerticalView thePlayerChangedScreen];
 }
 
 - (void)wholeScreenDelegate{
-    if (!self.toolVerticalView.isHidden) {
-        // 切换为全屏
-        self.toolVerticalView.hidden = YES;
-        _playerLayer.frame = self.bounds;
+    // 切换为全屏
+    _playerLayer.frame = self.bounds;
+    [self.toolVerticalView thePlayerChangedScreen];
+}
+
+- (void)setChangedScreen{
+    // 通过按钮进行屏幕变化
+    if (_screenDirectionTool.isWholeScreen) {
+        // half screen -> whole screen
+        [self wholeScreenDelegate];
+    }else{
+        // whole screen -> half screen
+        [self portraitScreenDelegate];
     }
 }
 #pragma mark ------------addView-----------------
 - (void)addVercialView{
     [self addSubview:self.toolVerticalView];
-    __block SFAVplayerView *blockSelf = self;
-    self.toolVerticalView.becomeWholeScreen = ^(){
-        // whole screen
-    };
-    
-    self.toolVerticalView.playerBtnBlock = ^(UIButton *sender){
-      // click player button
-        if (sender.selected) {
-            // start play
-            [blockSelf playVideo];
-        }else{
-            // pasue play
-            [blockSelf stopPlayVideo];
-        }
-    };
 }
 
 #pragma mark ---------------frame-------------------

@@ -10,8 +10,6 @@
 #import "SFAVPlayerSmallScreenToolView.h"
 #import "SFAVplayerWholeScreenToolView.h"
 
-typedef void(^BecomeWholeScreen)();
-typedef void(^PlayerBtnBlock)(UIButton *);
 typedef void(^PlaySliderBlock)(CGFloat);
 
 @interface SFAVPlayerVerticalBottomView : UIView
@@ -21,8 +19,6 @@ typedef void(^PlaySliderBlock)(CGFloat);
 @property (nonatomic, strong) SFAVPlayerSmallScreenToolView *smallToolView;
 @property (nonatomic, strong) SFAVplayerWholeScreenToolView *wholeToolView;
 
-@property (nonatomic, copy) BecomeWholeScreen becomeWholeScreen;
-@property (nonatomic, copy) PlayerBtnBlock playerBtnBlock;
 @property (nonatomic, copy) PlaySliderBlock playerSliderBlock;
 
 + (SFAVPlayerVerticalBottomView *)initForNib;
@@ -35,4 +31,5 @@ typedef void(^PlaySliderBlock)(CGFloat);
 - (void)endImageViewAnimation;
 
 - (void)thePlayerButtonChangedStatus;
+- (void)thePlayerChangedScreen;
 @end

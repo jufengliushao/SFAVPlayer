@@ -23,15 +23,17 @@
     [super awakeFromNib];
     _screenTool = [SFAVplayerScreenDirectionTool sharedSingleton];
     self.playBtn.selected = YES;
+    self.screenBtn.selected = NO;
 }
 
 - (IBAction)screenAction:(id)sender {
+    NSLog(@"sssssss");
     if (self.screenBtn.isSelected) {
         // whole screen -> pro screen
         
     }else{
         // pro screen -> whole screen
-        [_screenTool startMotionManager];
+        [_screenTool changeTheScreenWholeScreen];
     }
 }
 
@@ -51,6 +53,14 @@
     self.playBtn.selected = !self.playBtn.selected;
 }
 
+- (void)checkupTheStates{
+    self.screenBtn.selected = NO;
+    if ([SFAVplayerMainTool sharedSingleton].sfPlayerStatus == SF_PLAYING_PLAYERSTATUS) {
+        self.playBtn.selected = NO;
+    }else{
+        self.playBtn.selected = YES;
+    }
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

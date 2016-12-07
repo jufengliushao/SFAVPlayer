@@ -41,5 +41,5 @@ typedef void(^SFScreenPortraitBlock)();
 /**
  change the screen to whole screen by btn
  */
-- (void)startMotionManager;
+//- (void)startMotionManager;
 @end

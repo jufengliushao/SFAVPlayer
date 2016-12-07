@@ -17,10 +17,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEp-Mn-QtD" customClass="SFAVplayerMarkBottomView">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="203"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Adx-zb-Urp">
-                            <rect key="frame" x="147.5" y="71.5" width="25" height="25"/>
+                            <rect key="frame" x="147.5" y="89" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="hlH-xZ-ULv"/>
                                 <constraint firstAttribute="width" secondItem="Adx-zb-Urp" secondAttribute="height" multiplier="1:1" id="mex-rK-Uwp"/>
@@ -36,7 +36,7 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="aEp-Mn-QtD" secondAttribute="bottom" constant="35" id="Ng7-C1-eA0"/>
+                <constraint firstAttribute="bottom" secondItem="aEp-Mn-QtD" secondAttribute="bottom" id="Ng7-C1-eA0"/>
                 <constraint firstItem="aEp-Mn-QtD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gAq-A6-FWj"/>
                 <constraint firstAttribute="trailing" secondItem="aEp-Mn-QtD" secondAttribute="trailing" id="uJt-l4-5Nq"/>
                 <constraint firstItem="aEp-Mn-QtD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vbz-ee-0Ph"/>

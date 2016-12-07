@@ -38,33 +38,36 @@
     tap.delegate = self;
     [self.bottomView addGestureRecognizer:tap];
     _currentToolView = self.smallToolView;
+    self.wholeToolView.alpha = 0.0;
     [self addImage];
     self.waitImageView.hidden = YES;
     [self setCurrentTime];
 }
 
 #pragma mark ---------------action----------------
-- (IBAction)changeScreenAction:(id)sender {
-    if (self.becomeWholeScreen) {
-        self.becomeWholeScreen();
+- (void)thePlayerChangedScreen{
+    if ([SFAVplayerScreenDirectionTool sharedSingleton].isWholeScreen) {
+        // whole screen
+        self.smallToolView.alpha = 0.0;
+//        self.smallToolView.hidden = YES;
+        _currentToolView = self.wholeToolView;
+        [self.wholeToolView checkupTheStates];
+    }else{
+//         small screen
+        self.wholeToolView.alpha = 0.0;
+//        self.wholeToolView.hidden = YES;
+        _currentToolView = self.smallToolView;
+        [self.smallToolView checkupTheStates];
     }
+    _currentToolView.alpha = 0.0;
     [self selfAnimationWithShow];
-}
-
-- (IBAction)changeValue:(id)sender {
-    
-}
-
-- (IBAction)playerAction:(id)sender {
-    if (self.playerBtnBlock) {
-        self.playerBtnBlock(sender);
-    }
 }
 
 #pragma mark ---------------Tool----------------
 - (void)thePlayerButtonChangedStatus{
     if ([SFAVplayerScreenDirectionTool sharedSingleton].isWholeScreen) {
         // whole screen
+        self.wholeToolView.playBtn.selected = !self.wholeToolView.playBtn.selected;
     }else{
         // small tool view
         self.smallToolView.playBtn.selected = !self.smallToolView.playBtn.selected;
@@ -85,6 +88,8 @@
 - (void)setPlayerData{
     if ([SFAVplayerScreenDirectionTool sharedSingleton].isWholeScreen) {
         // whole screen
+        self.wholeToolView.videoSlider.value = _currRate;
+        self.wholeToolView.timeLabel.text = [NSString stringWithFormat:@"%@/%@", _currTime, _totalTime];
     }else{
         // small tool
         self.smallToolView.videoSlider.value = _currRate;
@@ -105,7 +110,7 @@
 
 #pragma mark ----------------UIGestureRecognizerDelegate-------------------
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
-    if ([NSStringFromClass([touch.view class]) isEqualToString:@"SFAVPlayerSmallScreenToolView"] || [NSStringFromClass([touch.view class]) isEqualToString:@"SFAVplayerMarkBottomView"]) {
+    if ([NSStringFromClass([touch.view class]) isEqualToString:@"SFAVPlayerSmallScreenToolView"] || [NSStringFromClass([touch.view class]) isEqualToString:@"SFAVplayerMarkBottomView"] || [NSStringFromClass([touch.view class]) isEqualToString:@"SFAVplayerWholeScreenToolView"]) {
         return YES;
     }
     return NO;
@@ -137,10 +142,23 @@
 - (SFAVPlayerSmallScreenToolView *)smallToolView{
     if(!_smallToolView){
         _smallToolView = [SFAVPlayerSmallScreenToolView initForNib];
-        _smallToolView.frame = self.bounds;
-        [self.bottomView addSubview:_smallToolView];
+        _smallToolView.frame = self.bottomView.bounds;
+        if(![self.subviews containsObject:_smallToolView]){
+            [self.bottomView addSubview:_smallToolView];
+        }
     }
     return _smallToolView;
+}
+
+- (SFAVplayerWholeScreenToolView *)wholeToolView{
+    if (!_wholeToolView) {
+        _wholeToolView = [SFAVplayerWholeScreenToolView initForNib];
+        _wholeToolView.frame = self.bounds;
+        if (![self.subviews containsObject:_wholeToolView]) {
+            [self.bottomView addSubview:_wholeToolView];
+        }
+    }
+    return _wholeToolView;
 }
 /*
 // Only override drawRect: if you perform custom drawing.
