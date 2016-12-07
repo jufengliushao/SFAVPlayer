@@ -54,19 +54,19 @@
                     <rect key="frame" x="0.0" y="159" width="375" height="35"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SFAVplayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUI-Pe-pvS">
-                            <rect key="frame" x="8" y="10" width="64" height="14.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <rect key="frame" x="15" y="9" width="73" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00/0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4V-XC-tVK">
-                            <rect key="frame" x="84" y="12" width="44" height="11"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                            <rect key="frame" x="100" y="10.5" width="57" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="C7E-Z8-ZAo">
-                            <rect key="frame" x="141" y="3" width="135.5" height="31"/>
+                            <rect key="frame" x="170" y="3" width="135.5" height="31"/>
                             <color key="minimumTrackTintColor" red="1" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </slider>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaQ-na-xiP">
@@ -88,7 +88,7 @@
                     <constraints>
                         <constraint firstItem="C7E-Z8-ZAo" firstAttribute="centerY" secondItem="xuw-HH-t6v" secondAttribute="centerY" id="3SE-lq-cJc"/>
                         <constraint firstItem="C7E-Z8-ZAo" firstAttribute="leading" secondItem="D4V-XC-tVK" secondAttribute="trailing" constant="15" id="C2A-15-LYy"/>
-                        <constraint firstItem="YUI-Pe-pvS" firstAttribute="leading" secondItem="xuw-HH-t6v" secondAttribute="leading" constant="8" id="Ikd-iC-5OV"/>
+                        <constraint firstItem="YUI-Pe-pvS" firstAttribute="leading" secondItem="xuw-HH-t6v" secondAttribute="leading" constant="15" id="Ikd-iC-5OV"/>
                         <constraint firstAttribute="trailing" secondItem="uaQ-na-xiP" secondAttribute="trailing" id="JpC-K1-q8V"/>
                         <constraint firstItem="YUI-Pe-pvS" firstAttribute="centerY" secondItem="xuw-HH-t6v" secondAttribute="centerY" id="Myb-uR-uQm"/>
                         <constraint firstItem="D4V-XC-tVK" firstAttribute="centerY" secondItem="xuw-HH-t6v" secondAttribute="centerY" id="Sx6-GA-Tll"/>
