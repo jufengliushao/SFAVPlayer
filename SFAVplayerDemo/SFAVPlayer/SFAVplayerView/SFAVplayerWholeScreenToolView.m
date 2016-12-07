@@ -8,7 +8,20 @@
 
 #import "SFAVplayerWholeScreenToolView.h"
 
+@interface SFAVplayerWholeScreenToolView()
+
+@end
+
 @implementation SFAVplayerWholeScreenToolView
+
+#pragma mark --------------Action-----------------
+- (IBAction)screenChangedAction:(id)sender {
+    // whole screen -> half screen
+}
+
+- (IBAction)backAction:(id)sender {
+    // back action
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

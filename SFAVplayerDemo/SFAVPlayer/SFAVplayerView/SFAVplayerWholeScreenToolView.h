@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface SFAVplayerWholeScreenToolView : UIView
+@property (weak, nonatomic) IBOutlet UIView *topView;
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UILabel *videoTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *logoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UISlider *videoSlider;
+@property (weak, nonatomic) IBOutlet UIButton *screenButton;
+
 
 @end

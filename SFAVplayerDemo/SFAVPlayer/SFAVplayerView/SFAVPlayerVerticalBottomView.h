@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SFAVPlayerSmallScreenToolView.h"
+#import "SFAVplayerWholeScreenToolView.h"
 
 typedef void(^BecomeWholeScreen)();
 typedef void(^PlayerBtnBlock)(UIButton *);
@@ -18,6 +19,7 @@ typedef void(^PlaySliderBlock)(CGFloat);
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 
 @property (nonatomic, strong) SFAVPlayerSmallScreenToolView *smallToolView;
+@property (nonatomic, strong) SFAVplayerWholeScreenToolView *wholeToolView;
 
 @property (nonatomic, copy) BecomeWholeScreen becomeWholeScreen;
 @property (nonatomic, copy) PlayerBtnBlock playerBtnBlock;

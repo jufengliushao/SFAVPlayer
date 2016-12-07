@@ -176,6 +176,9 @@ static SFAVplayerMainTool *tool = nil;
 #pragma mark ----------------tool---------------------
 // 返回播放的总时间
 - (long)totalSumTime{
+    if (!_playerItem.duration.value) {
+        return 0.1;
+    }
     return _playerItem.duration.value/_playerItem.duration.timescale;
 }
 

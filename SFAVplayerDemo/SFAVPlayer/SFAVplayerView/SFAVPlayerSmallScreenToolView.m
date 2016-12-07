@@ -36,6 +36,7 @@
 }
 
 - (IBAction)sliderAction:(id)sender {
+    //
 }
 
 - (IBAction)playAction:(id)sender {
