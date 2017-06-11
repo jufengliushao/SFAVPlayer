@@ -85,6 +85,7 @@ static NSString *playerBufferFull = @"playbackBufferFull";
 - (void)addVercialView{
     self.toolVerticalView.videoModel = _playerModel;
     [self addSubview:self.toolVerticalView];
+    self.toolVerticalView.showTime = self.toolShowTime;
 }
 
 #pragma mark ---------------frame-------------------
@@ -109,6 +110,13 @@ static NSString *playerBufferFull = @"playbackBufferFull";
         _toolVerticalView.frame = self.bounds;
     }
     return _toolVerticalView;
+}
+
+- (CGFloat)toolShowTime{
+    if (!_toolShowTime) {
+        _toolShowTime = 3;
+    }
+    return _toolShowTime;
 }
 /*
 // Only override drawRect: if you perform custom drawing.

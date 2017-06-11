@@ -13,7 +13,7 @@
 @interface SFAVplayerView : UIView
 - (instancetype)initWithFrame:(CGRect)frame playerModel:(SFAVplayModel *)playerModel;
 
-
+@property (nonatomic, assign) CGFloat toolShowTime; /** the tool show time default 3s */
 /**
  change the screen (half screen or whole screen)
  */

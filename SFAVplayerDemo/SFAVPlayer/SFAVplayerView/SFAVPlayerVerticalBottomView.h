@@ -20,6 +20,7 @@ typedef void(^PlaySliderBlock)(CGFloat);
 @property (nonatomic, strong) SFAVplayModel *videoModel;
 @property (nonatomic, strong) SFAVPlayerSmallScreenToolView *smallToolView;/** small tool view*/
 @property (nonatomic, strong) SFAVplayerWholeScreenToolView *wholeToolView;/** whole tool view */
+@property (nonatomic, assign) CGFloat showTime;
 
 @property (nonatomic, copy) PlaySliderBlock playerSliderBlock;
 
