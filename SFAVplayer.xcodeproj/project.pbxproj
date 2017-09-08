@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E6A798711F4EAC9D003DD2CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798701F4EAC9D003DD2CB /* main.m */; };
+		E6A798741F4EAC9D003DD2CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798731F4EAC9D003DD2CB /* AppDelegate.m */; };
+		E6A798771F4EAC9D003DD2CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798761F4EAC9D003DD2CB /* ViewController.m */; };
+		E6A7987A1F4EAC9D003DD2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6A798781F4EAC9D003DD2CB /* Main.storyboard */; };
+		E6A7987C1F4EAC9D003DD2CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6A7987B1F4EAC9D003DD2CB /* Assets.xcassets */; };
+		E6A7987F1F4EAC9D003DD2CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6A7987D1F4EAC9D003DD2CB /* LaunchScreen.storyboard */; };
+		E6A7988A1F4EAC9D003DD2CB /* SFAVplayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798891F4EAC9D003DD2CB /* SFAVplayerTests.m */; };
+		E6A798951F4EAC9D003DD2CB /* SFAVplayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798941F4EAC9D003DD2CB /* SFAVplayerUITests.m */; };
+		E6A798BF1F4EACC3003DD2CB /* SFGetTopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798A51F4EACC3003DD2CB /* SFGetTopVC.m */; };
+		E6A798C01F4EACC3003DD2CB /* SFScreenOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798A71F4EACC3003DD2CB /* SFScreenOrientation.m */; };
+		E6A798C11F4EACC3003DD2CB /* SFSystemIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798A91F4EACC3003DD2CB /* SFSystemIndicator.m */; };
+		E6A798C21F4EACC3003DD2CB /* SFAVplayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798AC1F4EACC3003DD2CB /* SFAVplayerModel.m */; };
+		E6A798C31F4EACC3003DD2CB /* SFAvplayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798AE1F4EACC3003DD2CB /* SFAvplayerManager.m */; };
+		E6A798C41F4EACC3003DD2CB /* SFAvplayerProBottomTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798B21F4EACC3003DD2CB /* SFAvplayerProBottomTool.m */; };
+		E6A798C51F4EACC3003DD2CB /* SFAvplayerProBottomTool.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6A798B31F4EACC3003DD2CB /* SFAvplayerProBottomTool.xib */; };
+		E6A798C61F4EACC3003DD2CB /* SFAvplayerProTopTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798B51F4EACC3003DD2CB /* SFAvplayerProTopTool.m */; };
+		E6A798C71F4EACC3003DD2CB /* SFAvplayerProTopTool.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6A798B61F4EACC3003DD2CB /* SFAvplayerProTopTool.xib */; };
+		E6A798C81F4EACC3003DD2CB /* SFAvplayerGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798B81F4EACC3003DD2CB /* SFAvplayerGestureView.m */; };
+		E6A798C91F4EACC3003DD2CB /* SFAvplayerProFunView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798BA1F4EACC3003DD2CB /* SFAvplayerProFunView.m */; };
+		E6A798CA1F4EACC3003DD2CB /* SFAvplayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798BC1F4EACC3003DD2CB /* SFAvplayerView.m */; };
+		E6A798CB1F4EACC3003DD2CB /* SFAvplayerWaitView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798BE1F4EACC3003DD2CB /* SFAvplayerWaitView.m */; };
+		E6A798CE1F4EACD0003DD2CB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A798CD1F4EACD0003DD2CB /* AVFoundation.framework */; };
+		E6A798D11F53C6F6003DD2CB /* SFAvplayerWholeBottomTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798D01F53C6F6003DD2CB /* SFAvplayerWholeBottomTool.m */; };
+		E6A798D31F53C707003DD2CB /* SFAvplayerWholeBottomTool.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6A798D21F53C707003DD2CB /* SFAvplayerWholeBottomTool.xib */; };
+		E6A798D61F53F418003DD2CB /* NSString+SFString.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798D51F53F418003DD2CB /* NSString+SFString.m */; };
+		E6A798D91F53F8E5003DD2CB /* SFAvplayerWholeFunView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798D81F53F8E5003DD2CB /* SFAvplayerWholeFunView.m */; };
+		E6A798DC1F5541EE003DD2CB /* SFAvplayerBottomBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798DB1F5541EE003DD2CB /* SFAvplayerBottomBaseView.m */; };
+		E6A798DF1F5660A1003DD2CB /* SFAvplayerWholeTopTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A798DE1F5660A1003DD2CB /* SFAvplayerWholeTopTool.m */; };
+		E6A798E11F5660AF003DD2CB /* SFAvplayerWholeTopTool.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6A798E01F5660AF003DD2CB /* SFAvplayerWholeTopTool.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6A798861F4EAC9D003DD2CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6A798641F4EAC9D003DD2CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6A7986B1F4EAC9D003DD2CB;
+			remoteInfo = SFAVplayer;
+		};
+		E6A798911F4EAC9D003DD2CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6A798641F4EAC9D003DD2CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6A7986B1F4EAC9D003DD2CB;
+			remoteInfo = SFAVplayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E6A7986C1F4EAC9D003DD2CB /* SFAVplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFAVplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6A798701F4EAC9D003DD2CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E6A798721F4EAC9D003DD2CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E6A798731F4EAC9D003DD2CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E6A798751F4EAC9D003DD2CB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E6A798761F4EAC9D003DD2CB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E6A798791F4EAC9D003DD2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E6A7987B1F4EAC9D003DD2CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6A7987E1F4EAC9D003DD2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E6A798801F4EAC9D003DD2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6A798851F4EAC9D003DD2CB /* SFAVplayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFAVplayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6A798891F4EAC9D003DD2CB /* SFAVplayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAVplayerTests.m; sourceTree = "<group>"; };
+		E6A7988B1F4EAC9D003DD2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6A798901F4EAC9D003DD2CB /* SFAVplayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFAVplayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6A798941F4EAC9D003DD2CB /* SFAVplayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAVplayerUITests.m; sourceTree = "<group>"; };
+		E6A798961F4EAC9D003DD2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6A798A41F4EACC3003DD2CB /* SFGetTopVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFGetTopVC.h; sourceTree = "<group>"; };
+		E6A798A51F4EACC3003DD2CB /* SFGetTopVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFGetTopVC.m; sourceTree = "<group>"; };
+		E6A798A61F4EACC3003DD2CB /* SFScreenOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFScreenOrientation.h; sourceTree = "<group>"; };
+		E6A798A71F4EACC3003DD2CB /* SFScreenOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFScreenOrientation.m; sourceTree = "<group>"; };
+		E6A798A81F4EACC3003DD2CB /* SFSystemIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSystemIndicator.h; sourceTree = "<group>"; };
+		E6A798A91F4EACC3003DD2CB /* SFSystemIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSystemIndicator.m; sourceTree = "<group>"; };
+		E6A798AB1F4EACC3003DD2CB /* SFAVplayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAVplayerModel.h; sourceTree = "<group>"; };
+		E6A798AC1F4EACC3003DD2CB /* SFAVplayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAVplayerModel.m; sourceTree = "<group>"; };
+		E6A798AD1F4EACC3003DD2CB /* SFAvplayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAvplayerManager.h; sourceTree = "<group>"; };
+		E6A798AE1F4EACC3003DD2CB /* SFAvplayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAvplayerManager.m; sourceTree = "<group>"; };
+		E6A798B11F4EACC3003DD2CB /* SFAvplayerProBottomTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAvplayerProBottomTool.h; sourceTree = "<group>"; };
+		E6A798B21F4EACC3003DD2CB /* SFAvplayerProBottomTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAvplayerProBottomTool.m; sourceTree = "<group>"; };
+		E6A798B31F4EACC3003DD2CB /* SFAvplayerProBottomTool.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFAvplayerProBottomTool.xib; sourceTree = "<group>"; };
+		E6A798B41F4EACC3003DD2CB /* SFAvplayerProTopTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAvplayerProTopTool.h; sourceTree = "<group>"; };
+		E6A798B51F4EACC3003DD2CB /* SFAvplayerProTopTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAvplayerProTopTool.m; sourceTree = "<group>"; };
+		E6A798B61F4EACC3003DD2CB /* SFAvplayerProTopTool.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFAvplayerProTopTool.xib; sourceTree = "<group>"; };
+		E6A798B71F4EACC3003DD2CB /* SFAvplayerGestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAvplayerGestureView.h; sourceTree = "<group>"; };
+		E6A798B81F4EACC3003DD2CB /* SFAvplayerGestureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAvplayerGestureView.m; sourceTree = "<group>"; };
+		E6A798B91F4EACC3003DD2CB /* SFAvplayerProFunView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAvplayerProFunView.h; sourceTree = "<group>"; };
+		E6A798BA1F4EACC3003DD2CB /* SFAvplayerProFunView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAvplayerProFunView.m; sourceTree = "<group>"; };
+		E6A798BB1F4EACC3003DD2CB /* SFAvplayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAvplayerView.h; sourceTree = "<group>"; };
+		E6A798BC1F4EACC3003DD2CB /* SFAvplayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAvplayerView.m; sourceTree = "<group>"; };
+		E6A798BD1F4EACC3003DD2CB /* SFAvplayerWaitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAvplayerWaitView.h; sourceTree = "<group>"; };
+		E6A798BE1F4EACC3003DD2CB /* SFAvplayerWaitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAvplayerWaitView.m; sourceTree = "<group>"; };
+		E6A798CD1F4EACD0003DD2CB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E6A798CF1F53C6F6003DD2CB /* SFAvplayerWholeBottomTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAvplayerWholeBottomTool.h; sourceTree = "<group>"; };
+		E6A798D01F53C6F6003DD2CB /* SFAvplayerWholeBottomTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAvplayerWholeBottomTool.m; sourceTree = "<group>"; };
+		E6A798D21F53C707003DD2CB /* SFAvplayerWholeBottomTool.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFAvplayerWholeBottomTool.xib; sourceTree = "<group>"; };
+		E6A798D41F53F418003DD2CB /* NSString+SFString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SFString.h"; sourceTree = "<group>"; };
+		E6A798D51F53F418003DD2CB /* NSString+SFString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SFString.m"; sourceTree = "<group>"; };
+		E6A798D71F53F8E5003DD2CB /* SFAvplayerWholeFunView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAvplayerWholeFunView.h; sourceTree = "<group>"; };
+		E6A798D81F53F8E5003DD2CB /* SFAvplayerWholeFunView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAvplayerWholeFunView.m; sourceTree = "<group>"; };
+		E6A798DA1F5541EE003DD2CB /* SFAvplayerBottomBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAvplayerBottomBaseView.h; sourceTree = "<group>"; };
+		E6A798DB1F5541EE003DD2CB /* SFAvplayerBottomBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAvplayerBottomBaseView.m; sourceTree = "<group>"; };
+		E6A798DD1F5660A1003DD2CB /* SFAvplayerWholeTopTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAvplayerWholeTopTool.h; sourceTree = "<group>"; };
+		E6A798DE1F5660A1003DD2CB /* SFAvplayerWholeTopTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAvplayerWholeTopTool.m; sourceTree = "<group>"; };
+		E6A798E01F5660AF003DD2CB /* SFAvplayerWholeTopTool.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFAvplayerWholeTopTool.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6A798691F4EAC9D003DD2CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A798CE1F4EACD0003DD2CB /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6A798821F4EAC9D003DD2CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6A7988D1F4EAC9D003DD2CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E6A798631F4EAC9D003DD2CB = {
+			isa = PBXGroup;
+			children = (
+				E6A7986E1F4EAC9D003DD2CB /* SFAVplayer */,
+				E6A798881F4EAC9D003DD2CB /* SFAVplayerTests */,
+				E6A798931F4EAC9D003DD2CB /* SFAVplayerUITests */,
+				E6A7986D1F4EAC9D003DD2CB /* Products */,
+				E6A798CC1F4EACD0003DD2CB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E6A7986D1F4EAC9D003DD2CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6A7986C1F4EAC9D003DD2CB /* SFAVplayer.app */,
+				E6A798851F4EAC9D003DD2CB /* SFAVplayerTests.xctest */,
+				E6A798901F4EAC9D003DD2CB /* SFAVplayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6A7986E1F4EAC9D003DD2CB /* SFAVplayer */ = {
+			isa = PBXGroup;
+			children = (
+				E6A798721F4EAC9D003DD2CB /* AppDelegate.h */,
+				E6A798731F4EAC9D003DD2CB /* AppDelegate.m */,
+				E6A798751F4EAC9D003DD2CB /* ViewController.h */,
+				E6A798761F4EAC9D003DD2CB /* ViewController.m */,
+				E6A798781F4EAC9D003DD2CB /* Main.storyboard */,
+				E6A798A21F4EACC3003DD2CB /* SFAvplayer */,
+				E6A7987B1F4EAC9D003DD2CB /* Assets.xcassets */,
+				E6A7987D1F4EAC9D003DD2CB /* LaunchScreen.storyboard */,
+				E6A798801F4EAC9D003DD2CB /* Info.plist */,
+				E6A7986F1F4EAC9D003DD2CB /* Supporting Files */,
+			);
+			path = SFAVplayer;
+			sourceTree = "<group>";
+		};
+		E6A7986F1F4EAC9D003DD2CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E6A798701F4EAC9D003DD2CB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E6A798881F4EAC9D003DD2CB /* SFAVplayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6A798891F4EAC9D003DD2CB /* SFAVplayerTests.m */,
+				E6A7988B1F4EAC9D003DD2CB /* Info.plist */,
+			);
+			path = SFAVplayerTests;
+			sourceTree = "<group>";
+		};
+		E6A798931F4EAC9D003DD2CB /* SFAVplayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E6A798941F4EAC9D003DD2CB /* SFAVplayerUITests.m */,
+				E6A798961F4EAC9D003DD2CB /* Info.plist */,
+			);
+			path = SFAVplayerUITests;
+			sourceTree = "<group>";
+		};
+		E6A798A21F4EACC3003DD2CB /* SFAvplayer */ = {
+			isa = PBXGroup;
+			children = (
+				E6A798A31F4EACC3003DD2CB /* helper */,
+				E6A798AA1F4EACC3003DD2CB /* model */,
+				E6A798AD1F4EACC3003DD2CB /* SFAvplayerManager.h */,
+				E6A798AE1F4EACC3003DD2CB /* SFAvplayerManager.m */,
+				E6A798AF1F4EACC3003DD2CB /* view */,
+			);
+			path = SFAvplayer;
+			sourceTree = "<group>";
+		};
+		E6A798A31F4EACC3003DD2CB /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				E6A798A41F4EACC3003DD2CB /* SFGetTopVC.h */,
+				E6A798A51F4EACC3003DD2CB /* SFGetTopVC.m */,
+				E6A798A61F4EACC3003DD2CB /* SFScreenOrientation.h */,
+				E6A798A71F4EACC3003DD2CB /* SFScreenOrientation.m */,
+				E6A798A81F4EACC3003DD2CB /* SFSystemIndicator.h */,
+				E6A798A91F4EACC3003DD2CB /* SFSystemIndicator.m */,
+				E6A798D41F53F418003DD2CB /* NSString+SFString.h */,
+				E6A798D51F53F418003DD2CB /* NSString+SFString.m */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		E6A798AA1F4EACC3003DD2CB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E6A798AB1F4EACC3003DD2CB /* SFAVplayerModel.h */,
+				E6A798AC1F4EACC3003DD2CB /* SFAVplayerModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E6A798AF1F4EACC3003DD2CB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E6A798B01F4EACC3003DD2CB /* ScreenToolBar */,
+				E6A798B71F4EACC3003DD2CB /* SFAvplayerGestureView.h */,
+				E6A798B81F4EACC3003DD2CB /* SFAvplayerGestureView.m */,
+				E6A798B91F4EACC3003DD2CB /* SFAvplayerProFunView.h */,
+				E6A798BA1F4EACC3003DD2CB /* SFAvplayerProFunView.m */,
+				E6A798D71F53F8E5003DD2CB /* SFAvplayerWholeFunView.h */,
+				E6A798D81F53F8E5003DD2CB /* SFAvplayerWholeFunView.m */,
+				E6A798BB1F4EACC3003DD2CB /* SFAvplayerView.h */,
+				E6A798BC1F4EACC3003DD2CB /* SFAvplayerView.m */,
+				E6A798BD1F4EACC3003DD2CB /* SFAvplayerWaitView.h */,
+				E6A798BE1F4EACC3003DD2CB /* SFAvplayerWaitView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		E6A798B01F4EACC3003DD2CB /* ScreenToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				E6A798DA1F5541EE003DD2CB /* SFAvplayerBottomBaseView.h */,
+				E6A798DB1F5541EE003DD2CB /* SFAvplayerBottomBaseView.m */,
+				E6A798B11F4EACC3003DD2CB /* SFAvplayerProBottomTool.h */,
+				E6A798B21F4EACC3003DD2CB /* SFAvplayerProBottomTool.m */,
+				E6A798B31F4EACC3003DD2CB /* SFAvplayerProBottomTool.xib */,
+				E6A798B41F4EACC3003DD2CB /* SFAvplayerProTopTool.h */,
+				E6A798B51F4EACC3003DD2CB /* SFAvplayerProTopTool.m */,
+				E6A798B61F4EACC3003DD2CB /* SFAvplayerProTopTool.xib */,
+				E6A798CF1F53C6F6003DD2CB /* SFAvplayerWholeBottomTool.h */,
+				E6A798D01F53C6F6003DD2CB /* SFAvplayerWholeBottomTool.m */,
+				E6A798D21F53C707003DD2CB /* SFAvplayerWholeBottomTool.xib */,
+				E6A798DD1F5660A1003DD2CB /* SFAvplayerWholeTopTool.h */,
+				E6A798DE1F5660A1003DD2CB /* SFAvplayerWholeTopTool.m */,
+				E6A798E01F5660AF003DD2CB /* SFAvplayerWholeTopTool.xib */,
+			);
+			path = ScreenToolBar;
+			sourceTree = "<group>";
+		};
+		E6A798CC1F4EACD0003DD2CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6A798CD1F4EACD0003DD2CB /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6A7986B1F4EAC9D003DD2CB /* SFAVplayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6A798991F4EAC9D003DD2CB /* Build configuration list for PBXNativeTarget "SFAVplayer" */;
+			buildPhases = (
+				E6A798681F4EAC9D003DD2CB /* Sources */,
+				E6A798691F4EAC9D003DD2CB /* Frameworks */,
+				E6A7986A1F4EAC9D003DD2CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SFAVplayer;
+			productName = SFAVplayer;
+			productReference = E6A7986C1F4EAC9D003DD2CB /* SFAVplayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E6A798841F4EAC9D003DD2CB /* SFAVplayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6A7989C1F4EAC9D003DD2CB /* Build configuration list for PBXNativeTarget "SFAVplayerTests" */;
+			buildPhases = (
+				E6A798811F4EAC9D003DD2CB /* Sources */,
+				E6A798821F4EAC9D003DD2CB /* Frameworks */,
+				E6A798831F4EAC9D003DD2CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6A798871F4EAC9D003DD2CB /* PBXTargetDependency */,
+			);
+			name = SFAVplayerTests;
+			productName = SFAVplayerTests;
+			productReference = E6A798851F4EAC9D003DD2CB /* SFAVplayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E6A7988F1F4EAC9D003DD2CB /* SFAVplayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6A7989F1F4EAC9D003DD2CB /* Build configuration list for PBXNativeTarget "SFAVplayerUITests" */;
+			buildPhases = (
+				E6A7988C1F4EAC9D003DD2CB /* Sources */,
+				E6A7988D1F4EAC9D003DD2CB /* Frameworks */,
+				E6A7988E1F4EAC9D003DD2CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6A798921F4EAC9D003DD2CB /* PBXTargetDependency */,
+			);
+			name = SFAVplayerUITests;
+			productName = SFAVplayerUITests;
+			productReference = E6A798901F4EAC9D003DD2CB /* SFAVplayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6A798641F4EAC9D003DD2CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = lsf;
+				TargetAttributes = {
+					E6A7986B1F4EAC9D003DD2CB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 42LDRD57VA;
+						ProvisioningStyle = Automatic;
+					};
+					E6A798841F4EAC9D003DD2CB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 42LDRD57VA;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E6A7986B1F4EAC9D003DD2CB;
+					};
+					E6A7988F1F4EAC9D003DD2CB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 42LDRD57VA;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E6A7986B1F4EAC9D003DD2CB;
+					};
+				};
+			};
+			buildConfigurationList = E6A798671F4EAC9D003DD2CB /* Build configuration list for PBXProject "SFAVplayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6A798631F4EAC9D003DD2CB;
+			productRefGroup = E6A7986D1F4EAC9D003DD2CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6A7986B1F4EAC9D003DD2CB /* SFAVplayer */,
+				E6A798841F4EAC9D003DD2CB /* SFAVplayerTests */,
+				E6A7988F1F4EAC9D003DD2CB /* SFAVplayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6A7986A1F4EAC9D003DD2CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A798C71F4EACC3003DD2CB /* SFAvplayerProTopTool.xib in Resources */,
+				E6A798D31F53C707003DD2CB /* SFAvplayerWholeBottomTool.xib in Resources */,
+				E6A7987F1F4EAC9D003DD2CB /* LaunchScreen.storyboard in Resources */,
+				E6A798C51F4EACC3003DD2CB /* SFAvplayerProBottomTool.xib in Resources */,
+				E6A7987C1F4EAC9D003DD2CB /* Assets.xcassets in Resources */,
+				E6A798E11F5660AF003DD2CB /* SFAvplayerWholeTopTool.xib in Resources */,
+				E6A7987A1F4EAC9D003DD2CB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6A798831F4EAC9D003DD2CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6A7988E1F4EAC9D003DD2CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6A798681F4EAC9D003DD2CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A798CB1F4EACC3003DD2CB /* SFAvplayerWaitView.m in Sources */,
+				E6A798D61F53F418003DD2CB /* NSString+SFString.m in Sources */,
+				E6A798BF1F4EACC3003DD2CB /* SFGetTopVC.m in Sources */,
+				E6A798CA1F4EACC3003DD2CB /* SFAvplayerView.m in Sources */,
+				E6A798771F4EAC9D003DD2CB /* ViewController.m in Sources */,
+				E6A798C41F4EACC3003DD2CB /* SFAvplayerProBottomTool.m in Sources */,
+				E6A798C91F4EACC3003DD2CB /* SFAvplayerProFunView.m in Sources */,
+				E6A798741F4EAC9D003DD2CB /* AppDelegate.m in Sources */,
+				E6A798C81F4EACC3003DD2CB /* SFAvplayerGestureView.m in Sources */,
+				E6A798DC1F5541EE003DD2CB /* SFAvplayerBottomBaseView.m in Sources */,
+				E6A798C21F4EACC3003DD2CB /* SFAVplayerModel.m in Sources */,
+				E6A798C11F4EACC3003DD2CB /* SFSystemIndicator.m in Sources */,
+				E6A798C61F4EACC3003DD2CB /* SFAvplayerProTopTool.m in Sources */,
+				E6A798C01F4EACC3003DD2CB /* SFScreenOrientation.m in Sources */,
+				E6A798C31F4EACC3003DD2CB /* SFAvplayerManager.m in Sources */,
+				E6A798D91F53F8E5003DD2CB /* SFAvplayerWholeFunView.m in Sources */,
+				E6A798D11F53C6F6003DD2CB /* SFAvplayerWholeBottomTool.m in Sources */,
+				E6A798DF1F5660A1003DD2CB /* SFAvplayerWholeTopTool.m in Sources */,
+				E6A798711F4EAC9D003DD2CB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6A798811F4EAC9D003DD2CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A7988A1F4EAC9D003DD2CB /* SFAVplayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6A7988C1F4EAC9D003DD2CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A798951F4EAC9D003DD2CB /* SFAVplayerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6A798871F4EAC9D003DD2CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6A7986B1F4EAC9D003DD2CB /* SFAVplayer */;
+			targetProxy = E6A798861F4EAC9D003DD2CB /* PBXContainerItemProxy */;
+		};
+		E6A798921F4EAC9D003DD2CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6A7986B1F4EAC9D003DD2CB /* SFAVplayer */;
+			targetProxy = E6A798911F4EAC9D003DD2CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E6A798781F4EAC9D003DD2CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6A798791F4EAC9D003DD2CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E6A7987D1F4EAC9D003DD2CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6A7987E1F4EAC9D003DD2CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6A798971F4EAC9D003DD2CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E6A798981F4EAC9D003DD2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6A7989A1F4EAC9D003DD2CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 42LDRD57VA;
+				INFOPLIST_FILE = SFAVplayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jufengliushao.SFAVplayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E6A7989B1F4EAC9D003DD2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 42LDRD57VA;
+				INFOPLIST_FILE = SFAVplayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jufengliushao.SFAVplayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E6A7989D1F4EAC9D003DD2CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 42LDRD57VA;
+				INFOPLIST_FILE = SFAVplayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jufengliushao.SFAVplayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFAVplayer.app/SFAVplayer";
+			};
+			name = Debug;
+		};
+		E6A7989E1F4EAC9D003DD2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 42LDRD57VA;
+				INFOPLIST_FILE = SFAVplayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jufengliushao.SFAVplayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFAVplayer.app/SFAVplayer";
+			};
+			name = Release;
+		};
+		E6A798A01F4EAC9D003DD2CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 42LDRD57VA;
+				INFOPLIST_FILE = SFAVplayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jufengliushao.SFAVplayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SFAVplayer;
+			};
+			name = Debug;
+		};
+		E6A798A11F4EAC9D003DD2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 42LDRD57VA;
+				INFOPLIST_FILE = SFAVplayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jufengliushao.SFAVplayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SFAVplayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6A798671F4EAC9D003DD2CB /* Build configuration list for PBXProject "SFAVplayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6A798971F4EAC9D003DD2CB /* Debug */,
+				E6A798981F4EAC9D003DD2CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6A798991F4EAC9D003DD2CB /* Build configuration list for PBXNativeTarget "SFAVplayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6A7989A1F4EAC9D003DD2CB /* Debug */,
+				E6A7989B1F4EAC9D003DD2CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6A7989C1F4EAC9D003DD2CB /* Build configuration list for PBXNativeTarget "SFAVplayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6A7989D1F4EAC9D003DD2CB /* Debug */,
+				E6A7989E1F4EAC9D003DD2CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6A7989F1F4EAC9D003DD2CB /* Build configuration list for PBXNativeTarget "SFAVplayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6A798A01F4EAC9D003DD2CB /* Debug */,
+				E6A798A11F4EAC9D003DD2CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6A798641F4EAC9D003DD2CB /* Project object */;
+}
